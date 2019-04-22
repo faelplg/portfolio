@@ -31,6 +31,10 @@ body{
 body {
   margin: 0;
 }
+section,
+.wrapper {
+  overflow-y: auto;
+}
 
 /** Native containers. */
 div, section {
@@ -41,7 +45,6 @@ div, section {
 .container {
   display: flex;
   padding: 16px;
-  height: 100%;
 }
 @media only screen and (max-width: 599px) {
   .container {
