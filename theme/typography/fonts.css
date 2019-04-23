@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Coda');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Noto+Serif|Roboto+Slab');
 
 body {
   font-family: 'Advent Pro', sans-serif;
@@ -13,4 +16,20 @@ h1 {
 }
 h2 {
   font-size: 1.6em;
+}
+
+.font-family--source-code-pro {
+  font-family: 'Source Code Pro', monospace;
+}
+.font-family--merriweather {
+  font-family: 'Merriweather', serif;
+}
+.font-family--noto-serif {
+  font-family: 'Noto Serif', serif;
+}
+.font-family--roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+.font-family--coda {
+  font-family: 'Coda', cursive;
 }

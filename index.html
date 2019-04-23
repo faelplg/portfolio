@@ -8,23 +8,33 @@
     <title>@faelplg - Web experiments</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container" style="background-color:#ffffbb;height:300px;"></div>
-      <div class="container align-items--center justify-content--center" style="margin-top:-165px;">
-        <div class="box">
-          <div class="container container--raw container--horizontal align-items--end">
-            <div class="diamond diamond--right"></div>
-            <div id="profile__diamond">
-              <img id="diamond__photo" src="./theme/assets/profile_img.jpg" alt="Fake placeholder.">
+    <div class="wrapper container container--raw container--vertical">
+      <!-- Cover container -->
+      <div id="profile-cover" class="box--shrink container container--horizontal container--raw">
+        <div id="profile-cover__container" class="box"></div>
+      </div>
+
+      <!-- Profile picture container -->
+      <div id="profile-picture__container" class="box--shrink">
+        <div id="profile-picture" class="box--shrink">
+          <div class="container container--raw container--horizontal">
+            <div class="mini-diamond diamond--right"></div>
+            <div id="profile-diamond">
+              <img id="profile-diamond__photo" src="./theme/assets/profile_img.jpg" alt="Fake placeholder.">
             </div>
-            <div class="diamond diamond--left"></div>
+            <div class="mini-diamond diamond--left"></div>
           </div>
         </div>
-        <div id="profile__headline" class="box">
+        <div id="profile-headline" class="box--shrink">
           <div class="container">
-            <h2 id="profile__name" class="text-align--center">Rafael Goulart (a.k.a. Fael)</h2>
-            <h1 id="profile__username" class="text-align--center">@faelplg</h1>
+            <h1 id="profile-name" class="font-family--noto-serif">Rafael Goulart</h1>
+            <h2 id="profile-username" class="font-family--noto-serif">@faelplg</h2>
           </div>
+        </div>
+      </div>
+
+      <div id="profile-content" class="box">
+        <div id="profile-content__container" class="container">
         </div>
       </div>
     </div>

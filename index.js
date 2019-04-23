@@ -12,5 +12,6 @@
 import readme from './README.md';
 import './style.css';
 import profileImg from './theme/assets/profile_img.jpg';
+import coverImg from './theme/assets/cover_img.jpg';
 
 console.log('Profile page.', profileImg);

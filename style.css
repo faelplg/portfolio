@@ -12,7 +12,13 @@
 
 /** Palette variables.*/
 :root {
+  --black: #222222;
+  --light-black: #666666;
+  --gray: #DFDFDF;
+  --dark-gray: #D1D1D1;
+  --light-gray: #ececec;
   --blue: blue;
+  --dark-blue: #10171e;
   --purple: purple;
   --red: red;
   --yellow: #fff350;
@@ -21,7 +27,8 @@
 
 html,
 body,
-.wrapper {
+.wrapper,
+.height--full {
   height: 100%;
 }
 html,
@@ -30,6 +37,8 @@ body{
 }
 body {
   margin: 0;
+  /* background-color: white; */
+  background-color: var(--gray, #EEEEEE);
 }
 section,
 .wrapper {
@@ -46,7 +55,7 @@ div, section {
   display: flex;
   padding: 16px;
 }
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 767px) {
   .container {
     padding: 8px;
   }

@@ -1,56 +1,208 @@
-.diamond {
-  width: 0;
-  height: 0;
-  border: 91px solid transparent;
-  border-bottom-color: var(--yellow, #fff350);
-  position: relative;
-  top: -91px;
+/**
+ * Profile cover
+ */
+#profile-cover {
+  background: url('../assets/cover_img_01.jpg') center center no-repeat;
+  background-size: cover;
 }
-.diamond:after {
-  content: '';
-  position: absolute;
-  left: -91px;
-  top: 91px;
-  width: 0;
-  height: 0;
-  border: 91px solid transparent;
-  border-top-color: var(--yellow, #fff350);
+#profile-cover__container {
+  color: #FAFAFA;
+  height: 300px;
+  /** Gradient - bottom */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.95+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
 }
-.diamond--left {
-  margin-left: -50px;
-  /* margin-top: 72px; */
-  /* margin-top: 228px; */
-}
-.diamond--right {
-  margin-right: -50px;
-  /* margin-top: 72px; */
-  /* margin-top: 228px; */
+@media only screen and (max-width: 767px) {
+  #profile-cover__container {
+    align-items: flex-start;
+    /** Gradient - top */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.95+0,0+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    height: 200px;
+  }
 }
 
-#profile__diamond {
+/**
+ * Profile picture
+ */
+#profile-picture__container {
+  margin-top: -102px;
   display: flex;
-  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row;
+}
+@media only screen and (max-width: 767px) {
+  #profile-picture__container {
+    flex-flow: column;
+    margin-top: -70px;
+    align-items: center;
+  }
+}
+#profile-picture {
+  padding: 0 32px;
+}
+
+/**
+ * Profile diamond
+ */
+#profile-diamond {
   align-items: center;
-  background-color: var(--amber, #ffc107);
+  background-color: white;
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  display: flex;
+  flex-flow: row;
+  -ms-flex-flow: row;
+  -webkit-flex-flow: row;
+  height: 200px;
   justify-content: center;
-  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-  height: 240px;
-  width: 240px;
-  transform: rotate(-45deg);
+  width: 200px;
   z-index: 7;
+  transform: rotate(-45deg);
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
-#profile__headline {
-  margin-top: 42px;
+@media only screen and (max-width: 767px) {
+  #profile-diamond {
+    height: 140px;
+    width: 140px;
+  }
 }
-#diamond__photo {
-  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2), 0 14px 21px 2px rgba(0,0,0,.14), 0 5px 26px 4px rgba(0,0,0,.12);
+#profile-diamond__photo {
+  -webkit-box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
+  box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   transform: rotate(45deg);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   z-index: 5;
-  height: 300px;
+  height: 250px;
 }
+@media only screen and (max-width: 767px) {
+  #profile-diamond__photo {
+    height: 170px;
+  }
+}
+
+/**
+ * Headline
+ */
+#profile-headline {
+  margin-top: -16px;
+}
+@media only screen and (max-width: 767px) {
+  #profile-headline {
+    margin-top: 24px;
+  }
+}
+#profile-name {
+  color: white;
+  fill: white;
+}
+#profile-username {
+  color: white;
+  fill: white;
+}
+@media only screen and (max-width: 767px) {
+  #profile-name {
+    color: var(--black, #222222);
+    fill: var(--black, #222222);
+  }
+  #profile-username {
+    color: var(--black, #222222);
+    fill: var(--black, #222222);
+    /* margin: 0 16px; */
+    /* text-align: center; */
+  }
+}
+
+/**
+ * Profile content
+ */
+ #profile-content {
+   margin-top: 42px;
+ }
+@media only screen and (max-width: 767px) {
+  #profile-content {
+    margin-top: 8px;
+  }
+}
+
+
+/**
+ * Side diamonds
+ */
+.mini-diamond {
+  align-items: center;
+  /* background-color: var(--light-gray, #222); */
+  background-color: white;
+  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
+  display: flex;
+  flex-flow: row;
+  -ms-flex-flow: row;
+  -webkit-flex-flow: row;
+  height: 120px;
+  justify-content: center;
+  margin-top: 42px;
+  transform: rotate(-45deg);
+  z-index: 5;
+  width: 120px;
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+}
+@media only screen and (max-width: 767px) {
+  .mini-diamond {
+    height: 90px;
+    width: 90px;
+    margin-top: 25px;
+  }
+}
+.diamond--left {
+  margin-left: -50px;
+}
+.diamond--right {
+  margin-right: -50px;
+}
+/* .diamond {
+  width: 0;
+  height: 0;
+  border: 65px solid transparent;
+  border-bottom-color: var(--gray, #666);
+  position: relative;
+  top: -121px;
+  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2), 0 14px 21px 2px rgba(0,0,0,.14), 0 5px 26px 4px rgba(0,0,0,.12);
+}
+.diamond:after {
+  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2), 0 14px 21px 2px rgba(0,0,0,.14), 0 5px 26px 4px rgba(0,0,0,.12);
+  content: '';
+  position: absolute;
+  left: -65px;
+  top: 65px;
+  width: 0;
+  height: 0;
+  border: 65px solid transparent;
+  border-top-color: var(--gray, #666);
+}
+@media only screen and (max-width: 767px) {
+  .diamond {
+    width: 0;
+    height: 0;
+    border: 51px solid transparent;
+    border-bottom-color: var(--gray, #666);
+    position: relative;
+    top: -70px;
+  }
+  .diamond:after {
+    content: '';
+    position: absolute;
+    left: -51px;
+    top: 51px;
+    width: 0;
+    height: 0;
+    border: 51px solid transparent;
+    border-top-color: var(--gray, #666);
+  }
+} */
