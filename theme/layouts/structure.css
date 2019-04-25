@@ -31,19 +31,20 @@
 /**
  * Profile picture
  */
-#profile-picture__container {
+#profile-picture {
   margin-top: -102px;
   display: flex;
   flex-flow: row;
 }
 @media only screen and (max-width: 767px) {
-  #profile-picture__container {
+  #profile-picture {
     flex-flow: column;
     margin-top: -70px;
     align-items: center;
   }
 }
-#profile-picture {
+#profile-picture__container {
+  flex: initial;
   padding: 0 32px;
 }
 
@@ -161,10 +162,18 @@
   }
 }
 .diamond--left {
-  margin-left: -50px;
+  margin-left: -64px;
 }
 .diamond--right {
-  margin-right: -50px;
+  margin-right: -64px;
+}
+@media only screen and (max-width: 767px) {
+  .diamond--left {
+    margin-left: -48px;
+  }
+  .diamond--right {
+    margin-right: -48px;
+  }
 }
 /* .diamond {
   width: 0;

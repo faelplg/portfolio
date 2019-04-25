@@ -90,6 +90,9 @@ div, section {
 .justify-content--center {
   justify-content: center;
 }
+.justify-content--end {
+  justify-content: flex-end;
+}
 
 /** Importing theme. */
 @import './theme/theme.css';
