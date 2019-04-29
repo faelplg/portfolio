@@ -1,7 +1,7 @@
 /*
 Structure
 
-The structure defines the containers behavior and the default structures for content displaying.
+The style structure defines the containers behavior and the default structures for content displaying.
 
 Styleguide 1
 */
@@ -9,13 +9,10 @@ Styleguide 1
 /*
 Code identation
 
-* Do use four (4) spaces for indentation.
-* Don’t use under_scores or “camelCase” to name classes or IDs.
-* Do use dashes to separate words.
-* Don’t use Class and ID names to reflect the underlying markup structure. .container-span and .small-header-div are bad names.
-* Do think about CSS in terms of objects and use simple nouns as names. .global-alert and .badge are good names.
-* Don’t use IDs and overly-specific selectors to style. Only use these when absolutely necessary (e.g. form controls or page anchors).
-* Do use classes to facilitate reusability and reduce CSS selector specificity conflicts.
+* Use two (2) spaces for indentation.
+* Use dashes (`prefix-suffix`) to separate words.
+* Use simple nouns: `.global-alert` and `.badge` are good names.
+* Use classes for reusability and to reduce conflicts.
 
 Styleguide 1.1
 */
@@ -23,18 +20,17 @@ Styleguide 1.1
 /*
 Responsivity checkpoints
 
-* phone_only: 599px;
-* tablet_portrait_min: 600px;
-* tablet_portrait_max: 899px;
-* tablet_landscape_min: 900px;
-* tablet_landscape_max: 1199px;
-* desktop_min: 1200px;
-* desktop_max: 1799px;
-* big_desktop_min: 1800px;
+* `--phone-only: 599px;`
+* `--tablet-portrait-min: 600px;`
+* `--tablet-portrait-max: 899px;`
+* `--tablet-landscape-min: 900px;`
+* `--tablet-landscape-max: 1199px;`
+* `--desktop-min: 1200px;`
+* `--desktop-max: 1799px;`
+* `--big-desktop_min: 1800px;`
 
 Styleguide 1.2
 */
-
 
 /*
 Reset styles
@@ -59,8 +55,8 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  /* font-size: 100%; */
+  /* font: inherit; */
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -87,21 +83,14 @@ table {
 	border-spacing: 0;
 }
 
-/** Palette variables.*/
-:root {
-  --black: #222222;
-  --light-black: #666666;
-  --gray: #DFDFDF;
-  --dark-gray: #D1D1D1;
-  --light-gray: #ececec;
-  --blue: blue;
-  --dark-blue: #10171e;
-  --purple: purple;
-  --red: red;
-  --yellow: #fff350;
-  --amber: #ffc107;
-}
+/*
+General & Wrappers.
 
+.wrapper       - Main wrapper for full height.
+.height--full  - Force height 100%.
+
+Styleguide 1.4
+*/
 html,
 body,
 .wrapper,
@@ -111,11 +100,6 @@ body,
 html,
 body{
   overflow: hidden;
-}
-body {
-  margin: 0;
-  /* background-color: white; */
-  background-color: var(--gray, #EEEEEE);
 }
 section,
 .wrapper {
@@ -130,12 +114,13 @@ div, section {
 /*
 Flexible container.
 
-:hover             - Subtle hover highlight.
-.stars-given       - A highlight indicating you've already given a star.
-.stars-given:hover - Subtle hover highlight on top of stars-given styling.
-.disabled          - Dims the button to indicate it cannot be used.
+.container              - Default flex container class.
+.container--dense       - A container with lowest padding.
+.container--raw         - A container with no padding.
+.container--horizontal  - Horizontal direction; `flex-flow: row;`.
+.container--vertical    - Vertical direction; `flex-flow: column;`.
 
-Styleguide 1.3
+Styleguide 1.5
 */
 .container {
   display: flex;
@@ -162,12 +147,10 @@ Styleguide 1.3
 /*
 Flexible boxes.
 
-:hover             - Subtle hover highlight.
-.stars-given       - A highlight indicating you've already given a star.
-.stars-given:hover - Subtle hover highlight on top of stars-given styling.
-.disabled          - Dims the button to indicate it cannot be used.
+.box         - Defaul flexible box with `flex: auto;` property.
+.box--shrink - Flexible box with `flex: initial` (no shrink) property.
 
-Styleguide 1.4
+Styleguide 1.6
 */
 .box {
   flex: auto;
@@ -178,18 +161,26 @@ Styleguide 1.4
 /*
 Flexible alignment.
 
-:hover             - Subtle hover highlight.
-.stars-given       - A highlight indicating you've already given a star.
-.stars-given:hover - Subtle hover highlight on top of stars-given styling.
-.disabled          - Dims the button to indicate it cannot be used.
+.align-items--start      - Align (children) start.
+.align-items--center     - Align (children) center.
+.align-items--end        - Align (children) end.
+.justify-content--start  - Justify items on start.
+.justify-content--center - Justify items on center.
+.justify-content--end    - Justify items on end.
 
-Styleguide 1.5
+Styleguide 1.7
 */
+.align-items--start {
+  align-items: flex-start;
+}
 .align-items--center {
   align-items: center;
 }
 .align-items--end {
   align-items: flex-end;
+}
+.justify-content--start {
+  justify-content: flex-start;
 }
 .justify-content--center {
   justify-content: center;
@@ -198,9 +189,11 @@ Styleguide 1.5
   justify-content: flex-end;
 }
 
-hr {
-  border-top: 5px solid #999;
-}
+/*
+Imports
 
-/** Importing theme. */
+* Theme wrapper: `@import './theme/theme.css';`
+
+Styleguide 1.8
+*/
 @import './theme/theme.css';

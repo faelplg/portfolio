@@ -2,7 +2,7 @@
  * Profile cover
  */
 #profile-cover {
-  background: url('../assets/cover_img_01.jpg') center center no-repeat;
+  background: url('./assets/cover_img_01.jpg') center center no-repeat;
   background-size: cover;
 }
 #profile-cover__container {

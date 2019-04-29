@@ -1,0 +1,16 @@
+/*
+Component styles
+
+Classes and styles for layout components.
+
+Styleguide 3
+*/
+
+/*
+Imports
+
+* `@import './button/button.css';` Button component styles.
+
+Styleguide 3.1
+*/
+@import './button/button.css';
