@@ -1,5 +1,5 @@
 /*
-Theme styles
+Project theme
 
 All files, assets and classes for application theming.
 
@@ -9,6 +9,7 @@ Styleguide 2
 /*
 Imports
 
+* `@import './variables.css';` Theme variables.
 * `@import './colors.css';` Theme color.
 * `@import './typography/fonts.css';` Theme fonts.
 * `@import './typography/typography.css';` Theme custom typography.
@@ -16,24 +17,8 @@ Imports
 
 Styleguide 2.1
 */
-@import './colors.css';
+@import './variables.css';
 @import './typography/fonts.css';
 @import './typography/typography.css';
 @import './elements.css';
-
-hr {
-  border-top: 5px solid #999;
-}
-
-.badge {
-  align-items: center;
-  background-color: #FAFAFA;
-  border-radius: 18px;
-  display: flex;
-  flex-flow: row;
-  font-size: 20px;
-  height: 40px;
-  justify-content: center;
-  margin: 4px;
-  width: 100px;
-}
+@import './colors.css';

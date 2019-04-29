@@ -11,24 +11,24 @@ A majority of buttons in the site are built from the same base class.
 
 Markup: buttons.hbs
 
-Style guide: 3.2
+Style guide: 6.2
 */
-button.button {
+.button {
   font-size: 35px;
 }
-button.button.primary {
+.button.primary {
   background-color: red;
 }
-button.button.remove {
+.button.remove {
   background-color: red;
 }
-button.button:hover,
-button.button:focus {
+.button:hover,
+.button:focus {
   background-color: red;
 }
-button.button.active {
+.button.active {
   background-color: red;
 }
-button.button.disabled {
+.button.disabled {
   background-color: red;
 }

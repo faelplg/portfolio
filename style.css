@@ -106,7 +106,7 @@ section,
   overflow-y: auto;
 }
 
-/** Native containers. */
+/* Native containers. */
 div, section {
   box-sizing: border-box;
 }

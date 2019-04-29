@@ -1,6 +1,60 @@
-/**
- * Profile cover
- */
+/*
+Theme elements
+
+Color variables and main applications
+
+Styleguide 5
+*/
+
+/*
+Horizontal rule
+
+Theme divider.
+
+Markup: <hr>
+
+Styleguide 5.1
+*/
+hr {
+  border-top: 5px solid #999;
+}
+
+/*
+Badge
+
+* `align-items: center;` Property
+* `border-radius: 18px;` Property
+* `display: flex;` Property
+* `flex-flow: row;` Property
+* `font-size: 20px;` Property
+* `height: 40px;` Property
+* `justify-content: center;` Property
+* `margin: 4px;` Property
+* `width: 100px;` Property
+
+Markup: <span class="badge"></span>
+
+Styleguide 5.2
+*/
+.badge {
+  align-items: center;
+  border-radius: 18px;
+  display: flex;
+  flex-flow: row;
+  font-size: 20px;
+  height: 40px;
+  justify-content: center;
+  margin: 4px;
+  width: 100px;
+}
+
+/*
+Profile cover
+
+#profile-cover - Profile cover image.
+
+Styleguide 5.3
+*/
 #profile-cover {
   background: url('./assets/cover_img_01.jpg') center center no-repeat;
   background-size: cover;
@@ -28,9 +82,13 @@
   }
 }
 
-/**
- * Profile picture
- */
+/*
+Profile picture
+
+#profile-picture - Profile picture image and styles.
+
+Styleguide 5.4
+*/
 #profile-picture {
   margin-top: -102px;
   display: flex;
@@ -48,12 +106,17 @@
   padding: 0 32px;
 }
 
-/**
- * Profile diamond
- */
+/*
+Profile diamond
+
+Profile diamond shape and animation.
+
+Markup: <div id="profile-diamond"></div>
+
+Styleguide 5.5
+*/
 #profile-diamond {
   align-items: center;
-  background-color: white;
   box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
   display: flex;
   flex-flow: row;
@@ -77,10 +140,10 @@
   -webkit-box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
   box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  transform: rotate(45deg);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  z-index: 5;
   height: 250px;
+  transform: rotate(45deg);
+  z-index: 5;
 }
 @media only screen and (max-width: 767px) {
   #profile-diamond__photo {
@@ -88,9 +151,19 @@
   }
 }
 
-/**
- * Headline
- */
+/*
+Profile headline
+
+Markup:
+<div id="profile-headline">
+  <div class="container">
+    <h1 id="profile-name" class="font-family--noto-serif" style="color:#222">Rafael Goulart</h1>
+    <h2 id="profile-username" class="font-family--noto-serif" style="color:#222">@faelplg</h2>
+  </div>
+</div>
+
+Styleguide 5.6
+*/
 #profile-headline {
   margin-top: -16px;
 }
@@ -120,9 +193,13 @@
   }
 }
 
-/**
- * Profile content
- */
+/*
+Profile content
+
+#profile-content - Profile content.
+
+Styleguide 5.7
+*/
  #profile-content {
    margin-top: 42px;
  }
@@ -133,9 +210,13 @@
 }
 
 
-/**
- * Side diamonds
- */
+/*
+Mini diamonds
+
+.mini-diamond - Mini diamonds from template.
+
+Styleguide 5.8
+*/
 .mini-diamond {
   align-items: center;
   /* background-color: var(--light-gray, #222); */
@@ -175,6 +256,14 @@
     margin-right: -48px;
   }
 }
+
+/*
+Another mini diamonds
+
+.diamond - Mini diamonds from another solution.
+
+Styleguide 5.9
+*/
 /* .diamond {
   width: 0;
   height: 0;

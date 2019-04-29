@@ -1,18 +1,57 @@
-/** Palette variables.*/
-:root {
-  --black: #222222;
-  --light-black: #666666;
-  --gray: #DFDFDF;
-  --dark-gray: #D1D1D1;
-  --light-gray: #ececec;
-  --blue: blue;
-  --dark-blue: #10171e;
-  --purple: purple;
-  --red: red;
-  --yellow: #fff350;
-  --amber: #ffc107;
+/*
+Theme colors
+
+Color variables and main applications
+
+Styleguide 4
+*/
+
+/*
+Body
+
+Markup:
+<div class="body--background" style="height:150px;padding:8px;">
+ <p style="margin:0;">[Showing div element to simulate body colors.]</p>
+</div>
+
+Styleguide 4.1
+*/
+body,
+.body--background {
+  background-color: var(--gray, #dfdfdf);
+  color: var(--black, #222);
 }
 
-body {
-  background-color: var(--gray, #EEEEEE);
+/*
+Badge
+
+.badge         - Default colors
+.badge--purple - Default colors
+
+Markup: <span class="badge {{modifier_class}}"></span>
+
+Styleguide 4.2
+*/
+.badge {
+  background-color: var(--gray, #dfdfdf);
+}
+.badge--purple {
+  background-color: var(--purple, purple);
+}
+
+/*
+Profile diamond
+
+.diamond--dark - Dark theme
+
+Markup: <div id="profile-diamond" class="{{modifier_class}}"></div>
+
+Styleguide 4.3
+*/
+#profile-diamond {
+  background-color: white;
+}
+/***/
+.diamond--dark {
+  background-color: #222!important;
 }

@@ -1,0 +1,38 @@
+/*
+Theme variables
+
+All theme variables
+
+Styleguide 3
+*/
+
+/*
+Palette
+
+* `--amber: #ffc107;`
+* `--black: #222222;`
+* `--blue: blue;`
+* `--dark-blue: #10171e;`
+* `--dark-gray: #D1D1D1;`
+* `--gray: #DFDFDF;`
+* `--light-black: #666666;`
+* `--light-gray: #ececec;`
+* `--purple: purple;`
+* `--red: red;`
+* `--yellow: #fff350;`
+
+Styleguide 3.1
+*/
+:root {
+  --amber: #ffc107;
+  --black: #222222;
+  --blue: blue;
+  --dark-blue: #10171e;
+  --dark-gray: #d1d1d1;
+  --gray: #dfdfdf;
+  --light-black: #666666;
+  --light-gray: #ececec;
+  --purple: purple;
+  --red: red;
+  --yellow: #fff350;
+}
