@@ -1,14 +1,91 @@
-/**
- * Responsivity checkpoints.
- * phone_only: 599px;
- * tablet_portrait_min: 600px;
- * tablet_portrait_max: 899px;
- * tablet_landscape_min: 900px;
- * tablet_landscape_max: 1199px;
- * desktop_min: 1200px;
- * desktop_max: 1799px;
- * big_desktop_min: 1800px;
- */
+/*
+Structure
+
+The structure defines the containers behavior and the default structures for content displaying.
+
+Styleguide 1
+*/
+
+/*
+Code identation
+
+* Do use four (4) spaces for indentation.
+* Don’t use under_scores or “camelCase” to name classes or IDs.
+* Do use dashes to separate words.
+* Don’t use Class and ID names to reflect the underlying markup structure. .container-span and .small-header-div are bad names.
+* Do think about CSS in terms of objects and use simple nouns as names. .global-alert and .badge are good names.
+* Don’t use IDs and overly-specific selectors to style. Only use these when absolutely necessary (e.g. form controls or page anchors).
+* Do use classes to facilitate reusability and reduce CSS selector specificity conflicts.
+
+Styleguide 1.1
+*/
+
+/*
+Responsivity checkpoints
+
+* phone_only: 599px;
+* tablet_portrait_min: 600px;
+* tablet_portrait_max: 899px;
+* tablet_landscape_min: 900px;
+* tablet_landscape_max: 1199px;
+* desktop_min: 1200px;
+* desktop_max: 1799px;
+* big_desktop_min: 1800px;
+
+Styleguide 1.2
+*/
+
+
+/*
+Reset styles
+
+**Source:** [meyerweb](http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126. *License: none (public domain)*
+
+Styleguide 1.3
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /** Palette variables.*/
 :root {
@@ -50,7 +127,16 @@ div, section {
   box-sizing: border-box;
 }
 
-/** (Flex) Container styles. */
+/*
+Flexible container.
+
+:hover             - Subtle hover highlight.
+.stars-given       - A highlight indicating you've already given a star.
+.stars-given:hover - Subtle hover highlight on top of stars-given styling.
+.disabled          - Dims the button to indicate it cannot be used.
+
+Styleguide 1.3
+*/
 .container {
   display: flex;
   padding: 16px;
@@ -73,14 +159,32 @@ div, section {
 .container--horizontal {
   flex-flow: row;
 }
-/** (Box) Container styles */
+/*
+Flexible boxes.
+
+:hover             - Subtle hover highlight.
+.stars-given       - A highlight indicating you've already given a star.
+.stars-given:hover - Subtle hover highlight on top of stars-given styling.
+.disabled          - Dims the button to indicate it cannot be used.
+
+Styleguide 1.4
+*/
 .box {
   flex: auto;
 }
 .box--shrink {
   flex: initial;
 }
-/** FlexBox alignment */
+/*
+Flexible alignment.
+
+:hover             - Subtle hover highlight.
+.stars-given       - A highlight indicating you've already given a star.
+.stars-given:hover - Subtle hover highlight on top of stars-given styling.
+.disabled          - Dims the button to indicate it cannot be used.
+
+Styleguide 1.5
+*/
 .align-items--center {
   align-items: center;
 }
@@ -92,6 +196,10 @@ div, section {
 }
 .justify-content--end {
   justify-content: flex-end;
+}
+
+hr {
+  border-top: 5px solid #999;
 }
 
 /** Importing theme. */

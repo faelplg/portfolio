@@ -1,3 +1,13 @@
+/*
+Theme styles
+
+:hover             - Subtle hover highlight.
+.stars-given       - A highlight indicating you've already given a star.
+.stars-given:hover - Subtle hover highlight on top of stars-given styling.
+.disabled          - Dims the button to indicate it cannot be used.
+
+Styleguide Theme.Main
+*/
 @import './typography/fonts.css';
 @import './typography/typography.css';
 @import './layouts/structure.css';
@@ -13,4 +23,24 @@
   justify-content: center;
   margin: 4px;
   width: 100px;
+}
+
+
+/*
+Buttons
+
+A majority of buttons in the site are built from the same base class.
+
+Markup: buttons.hbs
+
+.primary   - Use this class to indicate that the button is the primary feature of this form.
+.remove    - Use this class to indicate that the button will remove a feature, or other negative connotations.
+:hover     - Highlight the button when hovered.
+:disabled  - Make the button change appearance to reflect it being disabled.
+:active    - "Press" the button down when clicked.
+
+Style guide: demo.components.buttons
+*/
+.button {
+  font-size: 35px;
 }
