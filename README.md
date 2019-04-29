@@ -1,4 +1,4 @@
-portfolio-src
+portfolio
 =================
 
 'Development mode' files for my portfolio page.
@@ -10,13 +10,11 @@ Can be built on:
 
 Download
 --------
-**[portfolio-src](https://github.com/faelplg/portfolio-src/archive/master.zip)** [zip] or
+**[portfolio](https://github.com/faelplg/portfolio/archive/master.zip)** [zip] or
 
 ```
-git clone git://github.com/faelplg/portfolio-src.git
+git clone git://github.com/faelplg/portfolio.git
 ```
-
-
 Running the project
 -------------------
 
@@ -31,6 +29,6 @@ npm run build:production
 
 License
 -------
-This project is under the [MIT License](https://github.com/faelplg/portfolio-src/blob/master/LICENSE).
+This project is under the [MIT License](https://github.com/faelplg/portfolio/blob/master/LICENSE).
 
-<a href="https://github.com/faelplg/portfolio-src"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+<a href="https://github.com/faelplg/portfolio"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
