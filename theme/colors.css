@@ -9,31 +9,31 @@ Styleguide 4
 /*
 Body
 
-Markup:
-<div class="body--background" style="height:150px;padding:8px;">
- <p style="margin:0;">[Showing div element to simulate body colors.]</p>
-</div>
+Colors:
+background:  #fafafa    - Main background color
+text:        #222222    - Main text color
+fill:        #222222    - Main fill color
 
 Styleguide 4.1
 */
 body,
 .body--background {
-  background-color: var(--gray, #dfdfdf);
+  background-color: var(--background, #fafafa);
   color: var(--black, #222);
+  fill: var(--black, #222);
 }
 
 /*
 Badge
 
-.badge         - Default colors
-.badge--purple - Default colors
-
 Markup: <span class="badge {{modifier_class}}"></span>
+
+.badge--purple - Purple color
 
 Styleguide 4.2
 */
 .badge {
-  background-color: white;
+  background-color: var(--light-gray, #ececec);
 }
 .badge--purple {
   background-color: var(--purple, purple);

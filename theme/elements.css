@@ -22,17 +22,17 @@ hr {
 /*
 Badge
 
-* `align-items: center;` Property
-* `border-radius: 18px;` Property
-* `display: flex;` Property
-* `flex-flow: row;` Property
-* `font-size: 20px;` Property
-* `height: 40px;` Property
-* `justify-content: center;` Property
-* `margin: 4px;` Property
-* `width: 100px;` Property
+* align-items: center;
+* border-radius: 18px;
+* display: flex;
+* flex-flow: row;
+* font-size: 20px;
+* height: 40px;
+* justify-content: center;
+* margin: 4px;
+* width: 100px;
 
-Markup: <span class="badge"></span>
+Markup: <span class="badge" style="background-color:lightgrey"></span>
 
 Styleguide 5.2
 */
@@ -51,7 +51,7 @@ Styleguide 5.2
 /*
 Profile cover
 
-#profile-cover - Profile cover image.
+* **#profile-cover:** Profile cover image.
 
 Styleguide 5.3
 */
@@ -59,7 +59,7 @@ Styleguide 5.3
   background: url('./assets/cover_img_01.jpg') center center no-repeat;
   background-size: cover;
 }
-#profile-cover__container {
+#profile-cover--shadow {
   color: #FAFAFA;
   height: 300px;
   /** Gradient - bottom */
@@ -70,7 +70,7 @@ Styleguide 5.3
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
 }
 @media only screen and (max-width: 767px) {
-  #profile-cover__container {
+  #profile-cover--shadow {
     align-items: flex-start;
     /** Gradient - top */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.95+0,0+100 */
@@ -83,44 +83,44 @@ Styleguide 5.3
 }
 
 /*
-Profile picture
+Profile header
 
-#profile-picture - Profile picture image and styles.
+#profile-header - Profile header with picture, headline and status.
 
 Styleguide 5.4
 */
-#profile-picture {
+#profile-header {
   /* margin-top: -102px; */
   display: flex;
   flex-flow: row;
 }
 @media only screen and (max-width: 767px) {
-  #profile-picture {
+  #profile-header {
     flex-flow: column;
     /* margin-top: -70px; */
     align-items: center;
   }
 }
-#profile-picture__container {
+#profile-header__container {
   flex: initial;
   padding: 0 32px;
 }
 
 /*
-Profile diamond
+Profile picture
 
-Profile diamond shape and animation.
+Profile picture shape.
 
 Styleguide 5.5
 */
-#profile-diamond__photo {
+.profile-picture {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   height: 225px;
   transform: rotate(45deg);
   z-index: 5;
 }
 @media only screen and (max-width: 767px) {
-  #profile-diamond__photo {
+  .profile-picture {
     height: 170px;
   }
 }
