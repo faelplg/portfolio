@@ -33,22 +33,44 @@ Markup: <span class="badge {{modifier_class}}"></span>
 Styleguide 4.2
 */
 .badge {
-  background-color: var(--gray, #dfdfdf);
+  background-color: white;
 }
 .badge--purple {
   background-color: var(--purple, purple);
 }
 
 /*
-Profile diamond
+Mini diamond
 
-.diamond--dark - Dark theme
+.mini-diamond--dark - Dark theme
 
-Markup: <div id="profile-diamond" class="{{modifier_class}}"></div>
+Markup:
+<div class="diamond">
+  <div class="mini-diamond {{modifier_class}}"></div>
+</div>
 
 Styleguide 4.3
 */
-#profile-diamond {
+.mini-diamond {
+  background-color: var(--gray, #dfdfdf);
+}
+.mini-diamond--dark {
+  background-color: var(--black, #222);
+}
+
+/*
+Great diamond
+
+.diamond--dark - Dark theme
+
+Markup:
+<div class="great-diamond__wrapper">
+  <div class="great-diamond {{modifier_class}}"></div>
+</div>
+
+Styleguide 4.4
+*/
+.great-diamond {
   background-color: white;
 }
 /***/

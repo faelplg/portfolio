@@ -18,11 +18,17 @@
       <div id="profile-picture" class="box--shrink">
         <div id="profile-picture__container">
           <div class="container container--raw container--horizontal">
-            <div class="mini-diamond diamond--right"></div>
-            <div id="profile-diamond">
-              <img id="profile-diamond__photo" src="./theme/assets/profile_img.jpg" alt="Fake placeholder.">
+            <div class="mini-diamond__wrapper diamond--right">
+              <div class="mini-diamond"></div>
             </div>
-            <div class="mini-diamond diamond--left"></div>
+            <div id="profile-diamond" class="great-diamond__wrapper">
+              <div class="great-diamond">
+                <img id="profile-diamond__photo" src="./theme/assets/profile_img.jpg" alt="Fake placeholder.">
+              </div>
+            </div>
+            <div class="mini-diamond__wrapper diamond--left">
+              <div class="mini-diamond"></div>
+            </div>
           </div>
         </div>
 
@@ -43,7 +49,10 @@
 
       <!-- Profile content container -->
       <div id="profile-content" class="box">
-        <div id="profile-content__container" class="container">
+        <div id="profile-content__container" class="container container--horizontal align__items--center justify__content__center">
+          <div class="mini-diamond__wrapper">
+            <div class="mini-diamond mini-diamond--dark"></div>
+          </div>
         </div>
       </div>
     </div>

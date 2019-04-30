@@ -90,14 +90,14 @@ Profile picture
 Styleguide 5.4
 */
 #profile-picture {
-  margin-top: -102px;
+  /* margin-top: -102px; */
   display: flex;
   flex-flow: row;
 }
 @media only screen and (max-width: 767px) {
   #profile-picture {
     flex-flow: column;
-    margin-top: -70px;
+    /* margin-top: -70px; */
     align-items: center;
   }
 }
@@ -122,11 +122,7 @@ Styleguide 5.5
   flex-flow: row;
   -ms-flex-flow: row;
   -webkit-flex-flow: row;
-  height: 200px;
   justify-content: center;
-  width: 200px;
-  z-index: 7;
-  transform: rotate(-45deg);
   /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
   /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
@@ -211,31 +207,81 @@ Styleguide 5.7
 
 
 /*
+Great diamonds
+
+* '.great-diamond': Great diamonds from template.
+
+Markup:
+<div class="great-diamond__wrapper">
+  <div class="great-diamond"></div>
+</div>
+
+Styleguide 5.7
+*/
+.great-diamond__wrapper {
+  background: transparent;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  z-index: 7;
+}
+.great-diamond {
+  display: flex;
+  -ms-flex-flow: row;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  margin: 25px 0 0 25px;
+  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
+  transform: rotate(-45deg);
+  z-index: 6;
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+}
+
+/*
 Mini diamonds
 
-.mini-diamond - Mini diamonds from template.
+* '.mini-diamond': Mini diamonds from template.
+
+Markup:
+<div class="mini-diamond__wrapper">
+  <div class="mini-diamond"></div>
+</div>
 
 Styleguide 5.8
 */
+.mini-diamond__wrapper {
+  background: transparent;
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  z-index: 5;
+}
 .mini-diamond {
-  align-items: center;
-  /* background-color: var(--light-gray, #222); */
-  background-color: white;
-  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
   display: flex;
-  flex-flow: row;
   -ms-flex-flow: row;
   -webkit-flex-flow: row;
-  height: 120px;
+  flex-flow: row;
+  align-items: center;
   justify-content: center;
-  margin-top: 42px;
+  height: 100px;
+  width: 100px;
+  margin: 25px 0 0 25px;
+  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
   transform: rotate(-45deg);
-  z-index: 5;
-  width: 120px;
+  z-index: 6;
   /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
   /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
 @media only screen and (max-width: 767px) {
+  .mini-diamond__wrapper {
+    height: 140px;
+    width: 140px;
+  }
   .mini-diamond {
     height: 90px;
     width: 90px;
@@ -262,7 +308,7 @@ Another mini diamonds
 
 .diamond - Mini diamonds from another solution.
 
-Styleguide 5.9
+Styleguide 5.10
 */
 /* .diamond {
   width: 0;
