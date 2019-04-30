@@ -111,33 +111,11 @@ Profile diamond
 
 Profile diamond shape and animation.
 
-Markup: <div id="profile-diamond"></div>
-
 Styleguide 5.5
 */
-#profile-diamond {
-  align-items: center;
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
-  display: flex;
-  flex-flow: row;
-  -ms-flex-flow: row;
-  -webkit-flex-flow: row;
-  justify-content: center;
-  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-}
-@media only screen and (max-width: 767px) {
-  #profile-diamond {
-    height: 140px;
-    width: 140px;
-  }
-}
 #profile-diamond__photo {
-  -webkit-box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
-  box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  height: 250px;
+  height: 225px;
   transform: rotate(45deg);
   z-index: 5;
 }
@@ -219,9 +197,13 @@ Markup:
 Styleguide 5.7
 */
 .great-diamond__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
   background: transparent;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border: 1px solid black;
   z-index: 7;
 }
@@ -232,10 +214,11 @@ Styleguide 5.7
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
-  margin: 25px 0 0 25px;
-  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
+  height: 175px;
+  width: 175px;
+  margin: 0;
+  /* margin: 25px 0 0 25px; */
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
   transform: rotate(-45deg);
   z-index: 6;
   /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
@@ -255,6 +238,10 @@ Markup:
 Styleguide 5.8
 */
 .mini-diamond__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
   background: transparent;
   height: 150px;
   width: 150px;
@@ -270,7 +257,7 @@ Styleguide 5.8
   justify-content: center;
   height: 100px;
   width: 100px;
-  margin: 25px 0 0 25px;
+  margin: 0;
   box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
   transform: rotate(-45deg);
   z-index: 6;
@@ -285,7 +272,6 @@ Styleguide 5.8
   .mini-diamond {
     height: 90px;
     width: 90px;
-    margin-top: 25px;
   }
 }
 .diamond--left {
