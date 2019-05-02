@@ -40,40 +40,89 @@ Styleguide 4.2
 }
 
 /*
-Mini diamond
-
-.mini-diamond--dark - Dark theme
-
-Markup:
-<div class="diamond">
-  <div class="mini-diamond {{modifier_class}}"></div>
-</div>
+Diamonds
 
 Styleguide 4.3
 */
-.mini-diamond {
-  background-color: var(--gray, #dfdfdf);
-}
-.mini-diamond--dark {
-  background-color: var(--black, #222);
-}
 
 /*
 Great diamond
 
-.diamond--dark - Dark theme
+.diamond--dark - Dark diamond theme
 
 Markup:
 <div class="great-diamond__wrapper">
   <div class="great-diamond {{modifier_class}}"></div>
 </div>
 
-Styleguide 4.4
+Styleguide 4.3.1
 */
 .great-diamond {
   background-color: white;
+  color: var(--black, #222);
 }
-/***/
+
+/*
+Mini diamond
+
+.diamond--dark - Dark theme
+
+Markup:
+<div class="mini-diamond__wrapper">
+  <div class="mini-diamond {{modifier_class}}"></div>
+</div>
+
+Styleguide 4.3.2
+*/
+.mini-diamond {
+  /* background-color: var(--light-gray, #eeeeee); */
+  background-color: var(--gray, #eeeeee);
+  color: var(--black, #222);
+  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),
+              0 7px 10px 1px rgba(0,0,0,.14),
+              0 2px 16px 1px rgba(0,0,0,.12);
+}
+
+/** Dark diamond theme*/
 .diamond--dark {
-  background-color: #222!important;
+  background-color: var(--black, #222);
+  color: white;
+}
+
+/*
+Headline
+
+Markup:
+<div class="headline stay--on-light">
+  <h1>Rafael Goulart</h1>
+  <h2>@faelplg</h2>
+</div>
+
+Styleguide 4.4
+*/
+.headline {
+  color: white;
+  fill: white;
+}
+@media only screen and (max-width: 767px) {
+  .headline {
+    color: var(--black, #222222);
+    fill: var(--black, #222222);
+  }
+}
+
+/*
+Last color styles
+
+Markup:
+<div class="headline stay--on-light">
+  <h2>.stay--on-light.</h2>
+  <p>Set dark color for light backgrounds.</p>
+</div>
+
+Styleguide 4.99
+*/
+.stay--on-light {
+  color: var(--black, #222222);
+  fill: var(--black, #222222);
 }

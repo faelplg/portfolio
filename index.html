@@ -9,52 +9,83 @@
   </head>
   <body>
     <div class="wrapper container container--raw container--vertical">
-      <!-- Cover container -->
+      <!-- Profile cover -->
       <div id="profile-cover" class="box--shrink container container--horizontal container--raw">
-        <div id="profile-cover--shadow" class="box"></div>
-      </div>
+        <div id="profile-cover--mask" class="box"></div>
+      </div><!-- #profile-cover -->
 
-      <!-- Profile picture container -->
+      <!-- Profile header -->
       <div id="profile-header" class="box--shrink">
-        <div id="profile-header__container">
-          <div class="container container--raw container--horizontal">
-            <div class="mini-diamond__wrapper diamond--right">
-              <div class="mini-diamond"></div>
-            </div>
-            <div class="great-diamond__wrapper">
-              <div class="great-diamond">
-                <img class="profile-picture" src="./theme/assets/profile_img.jpg" alt="Fake placeholder.">
-              </div>
-            </div>
-            <div class="mini-diamond__wrapper diamond--left">
-              <div class="mini-diamond"></div>
+        <!-- Profile diamonds -->
+        <div id="profile-diamonds" class="container container--dense container--horizontal align-items--center justify-content--center">
+          <!-- <div class="mini-diamond__wrapper diamond--right">
+            <div class="mini-diamond"></div>
+          </div> -->
+          <div class="great-diamond__wrapper">
+            <div class="great-diamond">
+              <img class="profile-picture" src="./theme/assets/profile_pic_thumb.jpg" alt="Fake placeholder.">
             </div>
           </div>
-        </div>
+          <!-- <div class="mini-diamond__wrapper diamond--left">
+            <div class="mini-diamond"></div>
+          </div> -->
+        </div><!-- #profile-diamonds -->
 
-        <div id="profile-headline" class="box--shrink">
-          <div class="container">
-            <h1 id="profile-name" class="font-family--noto-serif">Rafael Goulart</h1>
-            <h2 id="profile-username" class="font-family--noto-serif">@faelplg</h2>
-          </div>
-        </div>
-
-        <div id="profile-status" class="box container container--raw container--horizontal justify-content--end">
-          <div class="container container--dense container--horizontal" style="margin-top:115px;">
+        <!-- Profile status -->
+        <!-- <div id="profile-status" class="box container container--raw container--horizontal justify-content--end">
+          <div class="container container--dense container--horizontal">
             <span class="badge">110</span>
             <span class="badge">110</span>
           </div>
-        </div>
-      </div>
+        </div> -->
+        <!-- #profile-status -->
+
+        <!-- Profile headline -->
+        <div id="profile-headline" class="box headline">
+          <h1>Rafael Goulart</h1>
+          <h2>@faelplg</h2>
+        </div><!-- #profile-headline -->
+      </div><!-- #profile-header -->
 
       <!-- Profile content container -->
       <div id="profile-content" class="box">
-        <div id="profile-content__container" class="container container--horizontal align__items--center justify__content__center">
-          <div class="mini-diamond__wrapper">
-            <div class="mini-diamond mini-diamond--dark"></div>
+        <div class="mini-diamond__wrapper">
+          <div class="mini-diamond diamond-link">
+            <svg id="github-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" width="100px" height="100px">
+              <g transform="translate(4.7, 5)">
+                <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/>
+              </g>
+            </svg>
           </div>
         </div>
-      </div>
+        <div class="mini-diamond__wrapper">
+          <div class="mini-diamond diamond-link">
+            <svg id="medium-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" width="100px" height="100px">
+              <g transform="translate(8, 8)">
+                <path d="M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="mini-diamond__wrapper">
+          <div class="mini-diamond diamond-link">
+            <svg id="codepen-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 65" width="100px" height="100px">
+              <g transform="translate(7, 8)">
+                <path d="M 25 4 L 4 17.34375 L 4 32.652344 L 25 46 L 46 32.65625 L 46 17.34375 Z M 25 29.183594 L 19.066406 25.070313 L 25 21.023438 L 30.933594 25.070313 Z M 27 17.605469 L 27 9.949219 L 40.429688 18.484375 L 34.410156 22.65625 Z M 23 17.605469 L 15.589844 22.65625 L 9.570313 18.484375 L 23 9.949219 Z M 12.09375 25.042969 L 8 27.832031 L 8 22.203125 Z M 15.570313 27.453125 L 23 32.605469 L 23 40.050781 L 9.589844 31.527344 Z M 27 32.605469 L 34.429688 27.453125 L 40.410156 31.527344 L 27 40.050781 Z M 37.90625 25.042969 L 42 22.203125 L 42 27.832031 Z "/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="mini-diamond__wrapper">
+          <div class="mini-diamond diamond-link">
+            <svg id="stackblitz-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 110 110" width="100px" height="100px">
+              <g transform="translate(4, -948)">
+                <path d="m 63,959.86207 -39,49.00023 22,0 -10.0833,36 40.0833,-50 -22,0 z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div><!-- #profile-content -->
     </div>
   </body>
 </html>

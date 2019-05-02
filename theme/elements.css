@@ -59,7 +59,7 @@ Styleguide 5.3
   background: url('./assets/cover_img_01.jpg') center center no-repeat;
   background-size: cover;
 }
-#profile-cover--shadow {
+#profile-cover--mask {
   color: #FAFAFA;
   height: 300px;
   /** Gradient - bottom */
@@ -70,7 +70,7 @@ Styleguide 5.3
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
 }
 @media only screen and (max-width: 767px) {
-  #profile-cover--shadow {
+  #profile-cover--mask {
     align-items: flex-start;
     /** Gradient - top */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.95+0,0+100 */
@@ -90,28 +90,150 @@ Profile header
 Styleguide 5.4
 */
 #profile-header {
-  /* margin-top: -102px; */
   display: flex;
   flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -133px;
 }
 @media only screen and (max-width: 767px) {
   #profile-header {
     flex-flow: column;
-    /* margin-top: -70px; */
     align-items: center;
+    margin-top: -107px;
   }
 }
-#profile-header__container {
-  flex: initial;
-  padding: 0 32px;
+
+/*
+Diamonds
+
+* .diamond__wrapper: Wrapper for clearfix.
+* .great-diamond: Big diamond shaped div.
+* .mini-diamond: Small diamond shaped div.
+
+Styleguide 5.5
+*/
+
+/*
+Great diamonds
+
+* '.great-diamond__wrapper': Normalize used space.
+* '.great-diamond': Big diamonds.
+
+Markup:
+<div class="great-diamond__wrapper">
+  <div class="great-diamond"></div>
+</div>
+
+Styleguide 5.5.1
+*/
+.great-diamond__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  background: transparent;
+  height: 250px;
+  width: 250px;
+  z-index: 7;
 }
+.great-diamond {
+  display: flex;
+  -ms-flex-flow: row;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 175px;
+  width: 175px;
+  margin: 0;
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  transform: rotate(-45deg);
+  z-index: 6;
+}
+@media only screen and (max-width: 767px) {
+  .great-diamond__wrapper {
+    height: 195px;
+    width: 195px;
+  }
+  .great-diamond {
+    height: 130px;
+    width: 130px;
+  }
+}
+
+/*
+Mini diamonds
+
+* '.mini-diamond__wrapper': Normalize used space.
+* '.mini-diamond': Small diamonds.
+
+Markup:
+<div class="mini-diamond__wrapper">
+  <div class="mini-diamond"></div>
+</div>
+
+Styleguide 5.5.2
+*/
+.mini-diamond__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  background: transparent;
+  height: 150px;
+  width: 150px;
+  z-index: 5;
+}
+.mini-diamond {
+  display: flex;
+  -ms-flex-flow: row;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  transform: rotate(-45deg);
+  z-index: 6;
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+}
+.mini-diamond > svg {
+  transform: rotate(45deg);
+}
+@media only screen and (max-width: 767px) {
+  .mini-diamond__wrapper {
+    height: 130px;
+    width: 130px;
+  }
+  .mini-diamond {
+    height: 90px;
+    width: 90px;
+  }
+}
+/* .diamond--left {
+  margin-left: -102px;
+}
+.diamond--right {
+  margin-right: -102px;
+}
+@media only screen and (max-width: 767px) {
+  .diamond--left {
+    margin-left: -98px;
+  }
+  .diamond--right {
+    margin-right: -98px;
+  }
+} */
 
 /*
 Profile picture
 
 Profile picture shape.
 
-Styleguide 5.5
+Styleguide 5.5.3
 */
 .profile-picture {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -126,45 +248,54 @@ Styleguide 5.5
 }
 
 /*
-Profile headline
+Headline
 
 Markup:
-<div id="profile-headline">
-  <div class="container">
-    <h1 id="profile-name" class="font-family--noto-serif" style="color:#222">Rafael Goulart</h1>
-    <h2 id="profile-username" class="font-family--noto-serif" style="color:#222">@faelplg</h2>
-  </div>
+<div class="headline stay--on-light">
+  <h1>Rafael Goulart</h1>
+  <h2>@faelplg</h2>
 </div>
 
 Styleguide 5.6
 */
+.headline {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.headline > h2 {
+  margin-top: 8px;
+}
+@media only screen and (max-width: 767px) {
+  .headline {
+    align-items: center;
+    justify-content: center;
+  }
+}
 #profile-headline {
-  margin-top: -16px;
+  margin: 0 8px 100px 8px;
 }
 @media only screen and (max-width: 767px) {
   #profile-headline {
-    margin-top: 24px;
+    margin: 0;
   }
 }
-#profile-name {
-  color: white;
-  fill: white;
-}
-#profile-username {
-  color: white;
-  fill: white;
-}
-@media only screen and (max-width: 767px) {
-  #profile-name {
-    color: var(--black, #222222);
-    fill: var(--black, #222222);
-  }
-  #profile-username {
-    color: var(--black, #222222);
-    fill: var(--black, #222222);
-    /* margin: 0 16px; */
-    /* text-align: center; */
-  }
+
+/*
+Profile status
+
+Markup:
+<div style="display:flex;flex-flow:row;align-items:Center;justify-content:flex-end;">
+  <span class="badge">110</span>
+  <span class="badge">110</span>
+</div>
+
+Styleguide 5.7
+*/
+#profile-status {
+  /* align-self: flex-end; */
+  margin-top: 64px;
 }
 
 /*
@@ -172,167 +303,17 @@ Profile content
 
 #profile-content - Profile content.
 
-Styleguide 5.7
+Styleguide 5.8
 */
  #profile-content {
-   margin-top: 42px;
+   display: flex;
+   flex-flow: row;
+   justify-content: center;
  }
 @media only screen and (max-width: 767px) {
   #profile-content {
     margin-top: 8px;
+    align-items: center;
+    flex-flow: column;
   }
 }
-
-
-/*
-Great diamonds
-
-* '.great-diamond': Great diamonds from template.
-
-Markup:
-<div class="great-diamond__wrapper">
-  <div class="great-diamond"></div>
-</div>
-
-Styleguide 5.7
-*/
-.great-diamond__wrapper {
-  align-items: center;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  background: transparent;
-  height: 250px;
-  width: 250px;
-  border: 1px solid black;
-  z-index: 7;
-}
-.great-diamond {
-  display: flex;
-  -ms-flex-flow: row;
-  -webkit-flex-flow: row;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
-  height: 175px;
-  width: 175px;
-  margin: 0;
-  /* margin: 25px 0 0 25px; */
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
-  transform: rotate(-45deg);
-  z-index: 6;
-  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-}
-
-/*
-Mini diamonds
-
-* '.mini-diamond': Mini diamonds from template.
-
-Markup:
-<div class="mini-diamond__wrapper">
-  <div class="mini-diamond"></div>
-</div>
-
-Styleguide 5.8
-*/
-.mini-diamond__wrapper {
-  align-items: center;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  background: transparent;
-  height: 150px;
-  width: 150px;
-  border: 1px solid black;
-  z-index: 5;
-}
-.mini-diamond {
-  display: flex;
-  -ms-flex-flow: row;
-  -webkit-flex-flow: row;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 100px;
-  margin: 0;
-  box-shadow: 0 4px 5px -2px rgba(0,0,0,.2), 0 7px 10px 1px rgba(0,0,0,.14), 0 2px 16px 1px rgba(0,0,0,.12);
-  transform: rotate(-45deg);
-  z-index: 6;
-  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-  /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
-}
-@media only screen and (max-width: 767px) {
-  .mini-diamond__wrapper {
-    height: 140px;
-    width: 140px;
-  }
-  .mini-diamond {
-    height: 90px;
-    width: 90px;
-  }
-}
-.diamond--left {
-  margin-left: -64px;
-}
-.diamond--right {
-  margin-right: -64px;
-}
-@media only screen and (max-width: 767px) {
-  .diamond--left {
-    margin-left: -48px;
-  }
-  .diamond--right {
-    margin-right: -48px;
-  }
-}
-
-/*
-Another mini diamonds
-
-.diamond - Mini diamonds from another solution.
-
-Styleguide 5.10
-*/
-/* .diamond {
-  width: 0;
-  height: 0;
-  border: 65px solid transparent;
-  border-bottom-color: var(--gray, #666);
-  position: relative;
-  top: -121px;
-  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2), 0 14px 21px 2px rgba(0,0,0,.14), 0 5px 26px 4px rgba(0,0,0,.12);
-}
-.diamond:after {
-  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2), 0 14px 21px 2px rgba(0,0,0,.14), 0 5px 26px 4px rgba(0,0,0,.12);
-  content: '';
-  position: absolute;
-  left: -65px;
-  top: 65px;
-  width: 0;
-  height: 0;
-  border: 65px solid transparent;
-  border-top-color: var(--gray, #666);
-}
-@media only screen and (max-width: 767px) {
-  .diamond {
-    width: 0;
-    height: 0;
-    border: 51px solid transparent;
-    border-bottom-color: var(--gray, #666);
-    position: relative;
-    top: -70px;
-  }
-  .diamond:after {
-    content: '';
-    position: absolute;
-    left: -51px;
-    top: 51px;
-    width: 0;
-    height: 0;
-    border: 51px solid transparent;
-    border-top-color: var(--gray, #666);
-  }
-} */
