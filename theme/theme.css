@@ -1,24 +1,15 @@
 /*
-Project theme
+Theme
 
 All files, assets and classes for application theming.
+
+* Theme colors:     `@import './colors.css';`
+* Theme typography: `@import './typography.css';`
+* Theme elements:   `@import './elements.css';`
 
 Styleguide 2
 */
 
-/*
-Imports
-
-* `@import './variables.css';` Theme variables.
-* `@import './colors.css';` Theme color.
-* `@import './typography/fonts.css';` Theme fonts.
-* `@import './typography/typography.css';` Theme custom typography.
-* `@import './elements.css';` Theme elements.
-
-Styleguide 2.1
-*/
-@import './variables.css';
-@import './typography/fonts.css';
-@import './typography/typography.css';
-@import './elements.css';
 @import './colors.css';
+@import './typography.css';
+@import './elements.css';

@@ -1,18 +1,28 @@
 /*
 Structure
 
-The style structure defines the containers behavior and the default structures for content displaying.
+Style structure defines containers behavior and the default structures for content display. I've organized the structure categories as follows:
+
+* 1.1. Code indentation
+* 1.2. Responsivity checkpoints
+* 1.3. Reset styles
+* 1.4. General & Wrappers
+* 1.5. Flexible container
+* 1.6. Flexible boxes
+* 1.7. Flexible alignment
+* 1.8. Imports
 
 Styleguide 1
 */
 
 /*
-Code identation
+Code indentation
 
 * Use two (2) spaces for indentation.
 * Use dashes (`prefix-suffix`) to separate words.
-* Use simple nouns: `.global-alert` and `.badge` are good names.
+* Use [BEM](http://getbem.com/) convention, e.g. block__element--modifier.
 * Use classes for reusability and to reduce conflicts.
+* Use ids for state-specific cases.
 
 Styleguide 1.1
 */
@@ -20,21 +30,32 @@ Styleguide 1.1
 /*
 Responsivity checkpoints
 
-* `--phone-only: 599px;`
-* `--tablet-portrait-min: 600px;`
-* `--tablet-portrait-max: 899px;`
-* `--tablet-landscape-min: 900px;`
-* `--tablet-landscape-max: 1199px;`
-* `--desktop-min: 1200px;`
-* `--desktop-max: 1799px;`
-* `--big-desktop_min: 1800px;`
+--phone-only:            599px   - Phone max-width.
+--tablet-portrait-min:   600px   - Tablet portrait min-width.
+--tablet-portrait-max:   899px   - Tablet portrait max-width.
+--tablet-landscape-min:  900px   - Tablet landscape min-width.
+--tablet-landscape-max:  1199px  - Tablet landscape max-width.
+--desktop-min:           1200px  - Regular desktop min-width.
+--desktop-max:           1799px  - Regular desktop max-width.
+--big-desktop_min:       1800px  - Large desktop min-width.
 
 Styleguide 1.2
 */
+:root {
+  --phone-only: 599px;
+  --tablet-portrait-min: 600px;
+  --tablet-portrait-max: 899px;
+  --tablet-landscape-min: 900px;
+  --tablet-landscape-max: 1199px;
+  --desktop-min: 1200px;
+  --desktop-max: 1799px;
+  --big-desktop_min: 1800px;
+}
 
 /*
 Reset styles
 
+The reset is a strategy for avoiding browser inconsistencies regards the default properties for general HTML elements.
 **Adapted from source:** [meyerweb](http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126. *License: none (public domain)*
 
 Styleguide 1.3
@@ -83,7 +104,10 @@ table {
 }
 
 /*
-General & Wrappers.
+Wrapper
+
+Remove overflow from the body. Set the full height for main structures.
+Set initial structure behavior for containers like `DIV` and `SECTION`.
 
 .wrapper       - Main wrapper for full height.
 .height--full  - Force height 100%.
@@ -104,16 +128,16 @@ section,
 .wrapper {
   overflow-y: auto;
 }
-
 /* Native containers. */
-div, section {
+div, section, header, aside, fieldset {
   box-sizing: border-box;
 }
 
 /*
-Flexible container.
+Flexible container
 
 .container              - Default flex container class.
+.container--full        - Keep properties from default container on the mobile resolution.
 .container--dense       - A container with lowest padding.
 .container--raw         - A container with no padding.
 .container--horizontal  - Horizontal direction; `flex-flow: row;`.
@@ -125,6 +149,7 @@ Styleguide 1.5
   display: flex;
   padding: 16px;
 }
+/* --tablet-landscape-max */
 @media only screen and (max-width: 1199px) {
   .container {
     padding: 8px;
@@ -152,11 +177,12 @@ Styleguide 1.5
     flex-flow: column;
   }
 }
-/*
-Flexible boxes.
 
-.box         - Defaul flexible box with `flex: auto;` property.
-.box--shrink - Flexible box with `flex: initial` (no shrink) property.
+/*
+Flexible boxes
+
+.box          - Default flexible box with `flex: auto;` property.
+.box--shrink  - Flexible box with `flex: initial` (no shrink) property.
 .box--squeeze - Flexible box with `flex: 0` (no shrink) property.
 
 Styleguide 1.6
@@ -167,11 +193,9 @@ Styleguide 1.6
 .box--shrink {
   flex: initial;
 }
-.box--squeeze {
-  flex: 0;
-}
+
 /*
-Flexible alignment.
+Flexible alignment
 
 .align-items--start      - Align (children) start.
 .align-items--center     - Align (children) center.
@@ -202,7 +226,7 @@ Styleguide 1.7
 }
 
 /*
-Imports
+Post-imports
 
 * Theme wrapper: `@import './theme/theme.css';`
 

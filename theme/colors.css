@@ -3,8 +3,43 @@ Theme colors
 
 Color variables and main applications
 
-Styleguide 4
+Styleguide 2.1
 */
+
+/*
+Palette
+
+Colors:
+--black:        #222222    - Black color.
+--light-black:  #666666    - Light black color.
+--dark-gray:    #9e9e9e    - Dark gray color.
+--gray:         #cccccc    - Gray color.
+--light-gray:   #eeeeee    - Light gray color.
+--yellow:       #fff350    - Main background color.
+--amber:        #ffc107    - Amber color.
+--pink:         pink       - Pink color.
+--red:          red        - Red color.
+--blue:         blue       - Blue color.
+--purple:       purple     - Purple color.
+--dark-blue:    #122c45    - Dark blue color.
+
+Styleguide 2.1.1
+*/
+:root {
+  --amber: #ffc107;
+  --background: #fafafa;
+  --black: #222222;
+  --blue: blue;
+  --dark-blue: #122c45;
+  --dark-gray: #d1d1d1;
+  --gray: #cccccc;
+  --light-black: #666666;
+  --light-gray: #eeeeee;
+  --pink: pink;
+  --purple: purple;
+  --red: red;
+  --yellow: #fff350;
+}
 
 /*
 Body
@@ -14,7 +49,7 @@ background:  #fafafa    - Main background color
 text:        #222222    - Main text color
 fill:        #222222    - Main fill color
 
-Styleguide 4.1
+Styleguide 2.1.2
 */
 body,
 .body--background {
@@ -30,7 +65,7 @@ Markup: <span class="badge {{modifier_class}}"></span>
 
 .badge--purple - Purple color
 
-Styleguide 4.2
+Styleguide 2.1.3
 */
 .badge {
   background-color: var(--light-gray, #ececec);
@@ -42,14 +77,15 @@ Styleguide 4.2
 /*
 Diamonds
 
-Styleguide 4.3
+The diamonds are the main elements of the portfolio.
+They represent the main links for social networks and online tools for developers.
+Besides this, the diamond is the shape of the profile picture.
+
+Styleguide 2.1.4
 */
 button.diamond {
   padding: 0;
   border: none;
-}
-.diamond {
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 }
 .diamond > svg {
@@ -61,17 +97,13 @@ Diamond behavior
 Hover and click styles.
 
 .active  - Active button state.
-:hover   - Hover to change style.
-:focus   - On click style.
-:active  - Active clicked.
-:disabled  - Active clicked.
 
 Markup:
 <div class="mini-diamond__wrapper">
-  <div class="mini-diamond diamond"></div>
+  <div class="mini-diamond diamond {{modifier_class}}"></div>
 </div>
 
-Styleguide 4.3.1
+Styleguide 2.1.4.1
 */
 .diamond:hover {
   box-shadow: 0 7px 9px -4px rgba(0,0,0,.2),
@@ -138,7 +170,7 @@ Markup:
   <div class="great-diamond {{modifier_class}}"></div>
 </div>
 
-Styleguide 4.3.2
+Styleguide 2.1.4.2
 */
 .great-diamond {
   background-color: white;
@@ -155,7 +187,7 @@ Markup:
   <div class="mini-diamond {{modifier_class}}"></div>
 </div>
 
-Styleguide 4.3.3
+Styleguide 2.1.4.3
 */
 .mini-diamond {
   /* background-color: var(--light-gray, #eeeeee); */
@@ -176,7 +208,7 @@ Markup:
   <h2>@faelplg</h2>
 </div>
 
-Styleguide 4.4
+Styleguide 2.1.5
 */
 .headline {
   color: white;
@@ -196,7 +228,7 @@ Styleguide 4.4
 /*
 Feed boxes
 
-Styleguide 4.5
+Styleguide 2.1.6
 */
 .feed-box {
   background-color: var(--light-gray);
@@ -218,7 +250,7 @@ Markup:
   <p>Set dark color for light backgrounds.</p>
 </div>
 
-Styleguide 4.99
+Styleguide 2.1.77
 */
 .b--amber {
   background-color: var(--amber);
@@ -235,7 +267,7 @@ Markup:
   <p>Set dark color for light backgrounds.</p>
 </div>
 
-Styleguide 4.99
+Styleguide 2.1.99
 */
 .stay--on-light {
   color: var(--black, #222222);

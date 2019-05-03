@@ -124,7 +124,6 @@ button.diamond {
 }
 .diamond {
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 }
 #profile-diamonds {
   margin-left: 50px;

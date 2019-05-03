@@ -1,18 +1,25 @@
-Portfolio style guide
-=========================
+@faelplg - Portfolio
+=====================
+
+Style guide for my personal portfolio.
 
 How it works?
-------------------------------
+-------------
+
+This style guide is automatically generated using [kss](https://github.com/kss-node/kss-node) for NodeJS.
+
+##### Installing
+
 1. Install `kss-node`. Type `npm install kss`.
 2. Install `npx`.
-2. Run the command:
+3. Run the command:
 
 ```
-npx kss --source <sourcedir> --homepage <homepage> --title <title>
+npx kss --source <sourcedir> --homepage <homepage> --title <title> --css <css-file>
 ```
 
-TL:DR;
--------------
+Example
+-------
 
 Here is a basic format for kss-node documentation.
 
@@ -49,10 +56,10 @@ Styleguide 1.1
 As you see in the above samples, `kss-node` comment has some blocks.
 From the top,
 
-1. Element's title
-2. Element's description
-3. List of modifier classes or pseudo-classes
-4. HTML markup
-5. Reference to the element's position in the style guide
+ 1. Element's title
+ 2. Element's description
+ 3. List of modifier classes or pseudo-classes
+ 4. HTML markup
+ 5. Reference to the element's position in the style guide
 
 And each description supports the Markdown writing.
