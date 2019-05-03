@@ -35,12 +35,11 @@ Styleguide 1.2
 /*
 Reset styles
 
-**Source:** [meyerweb](http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126. *License: none (public domain)*
+**Adapted from source:** [meyerweb](http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126. *License: none (public domain)*
 
 Styleguide 1.3
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, applet, object, iframe, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -64,9 +63,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+/* body {
 	line-height: 1;
-}
+} */
 ol, ul {
 	list-style: none;
 }
@@ -126,9 +125,12 @@ Styleguide 1.5
   display: flex;
   padding: 16px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   .container {
     padding: 8px;
+  }
+  .container--full {
+    padding: 16px;
   }
 }
 .container--dense {
@@ -141,14 +143,21 @@ Styleguide 1.5
 .container--vertical {
   flex-flow: column;
 }
-.container--horizontal {
+.container--horizontal,
+.container--responsive {
   flex-flow: row;
+}
+@media only screen and (max-width: 599px) {
+  .container--responsive {
+    flex-flow: column;
+  }
 }
 /*
 Flexible boxes.
 
 .box         - Defaul flexible box with `flex: auto;` property.
 .box--shrink - Flexible box with `flex: initial` (no shrink) property.
+.box--squeeze - Flexible box with `flex: 0` (no shrink) property.
 
 Styleguide 1.6
 */
@@ -157,6 +166,9 @@ Styleguide 1.6
 }
 .box--shrink {
   flex: initial;
+}
+.box--squeeze {
+  flex: 0;
 }
 /*
 Flexible alignment.

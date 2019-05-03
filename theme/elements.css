@@ -69,18 +69,18 @@ Styleguide 5.3
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
 }
-@media only screen and (max-width: 767px) {
+/** Gradient - top */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.95+0,0+100 */
+/* @media only screen and (max-width: 1199px) {
   #profile-cover--mask {
     align-items: flex-start;
-    /** Gradient - top */
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.95+0,0+100 */
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#00000000',GradientType=0 );
     height: 200px;
   }
-}
+} */
 
 /*
 Profile header
@@ -92,11 +92,11 @@ Styleguide 5.4
 #profile-header {
   display: flex;
   flex-flow: row;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin-top: -133px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   #profile-header {
     flex-flow: column;
     align-items: center;
@@ -113,6 +113,27 @@ Diamonds
 
 Styleguide 5.5
 */
+/*
+Active diamonds
+
+Styleguide 5.5.1
+*/
+button.diamond {
+  padding: 0;
+  border: none;
+}
+.diamond {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+#profile-diamonds {
+  margin-left: 50px;
+}
+@media only screen and (max-width: 1199px) {
+  #profile-diamonds {
+    margin-left: 0;
+  }
+}
 
 /*
 Great diamonds
@@ -125,7 +146,7 @@ Markup:
   <div class="great-diamond"></div>
 </div>
 
-Styleguide 5.5.1
+Styleguide 5.5.2
 */
 .great-diamond__wrapper {
   align-items: center;
@@ -151,7 +172,7 @@ Styleguide 5.5.1
   transform: rotate(-45deg);
   z-index: 6;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   .great-diamond__wrapper {
     height: 195px;
     width: 195px;
@@ -173,7 +194,7 @@ Markup:
   <div class="mini-diamond"></div>
 </div>
 
-Styleguide 5.5.2
+Styleguide 5.5.3
 */
 .mini-diamond__wrapper {
   align-items: center;
@@ -181,8 +202,8 @@ Styleguide 5.5.2
   flex-flow: row;
   justify-content: center;
   background: transparent;
-  height: 210px;
-  width: 210px;
+  height: 150px;
+  width: 150px;
   /* border: 1px solid red; */
   z-index: 5;
 }
@@ -193,8 +214,8 @@ Styleguide 5.5.2
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
   margin: 0;
   transform: rotate(-45deg);
   z-index: 6;
@@ -204,16 +225,16 @@ Styleguide 5.5.2
 .mini-diamond > svg {
   transform: rotate(45deg);
 }
-/* @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 599px) {
   .mini-diamond__wrapper {
-    height: 130px;
-    width: 130px;
+    height: 225px;
+    width: 225px;
   }
   .mini-diamond {
-    height: 90px;
-    width: 90px;
+    height: 150px;
+    width: 150px;
   }
-} */
+}
 
 /*
 Profile picture
@@ -228,7 +249,7 @@ Styleguide 5.5.3
   transform: rotate(45deg);
   z-index: 5;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   .profile-picture {
     height: 170px;
   }
@@ -251,13 +272,7 @@ Styleguide 5.6
   align-items: flex-start;
   justify-content: center;
 }
-.headline > h2 {
-  margin-top: 8px;
-}
-.headline > h3 {
-  margin-top: 32px;
-}
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   .headline {
     align-items: center;
     justify-content: center;
@@ -267,9 +282,9 @@ Styleguide 5.6
   }
 }
 #profile-headline {
-  margin: 0 8px 56px 8px;
+  margin: 0 8px 43px 8px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   #profile-headline {
     margin: 0;
   }
@@ -301,30 +316,103 @@ Styleguide 5.8
  #profile-content {
    display: flex;
    flex-flow: row;
-   justify-content: center;
  }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   #profile-content {
+    flex-flow: column;
     margin-top: 8px;
     align-items: center;
-    flex-flow: column;
+  }
+}
+/*
+Link container
+
+#link-container - Link container.
+
+Styleguide 5.8.1
+*/
+ #link-container {
+   min-width: 360px;
+   margin-top: -100px;
+ }
+@media only screen and (max-width: 1199px) {
+  #link-container {
+    margin-top: 0;
+    min-width: 240px;
+    max-width: 280px;
   }
 }
 
 /*
-Feed boxes
+Bio
 
 Styleguide 5.9
 */
-.feed-box {
-  background-color: white;
+/*
+Bio container
 
-  margin: 8px 64px;
-  min-height: 300px;
+#bio-container  - Feed container.
+
+Styleguide 5.9.1
+*/
+#bio-container {
+  margin-top: -56px;
 }
-@media only screen and (max-width: 767px) {
-  .feed-box {
-    margin: 8px 16px;
-    min-height: 300px;
+@media only screen and (max-width: 1199px) {
+  #bio-container {
+    margin-top: -16px;
   }
 }
+/*
+Fedd boxes
+
+.bio-box  - Feed box.
+
+Styleguide 5.9.2
+*/
+.bio-box {
+  min-width: 280px;
+  max-width: 380px;
+}
+@media only screen and (max-width: 1199px) {
+  .bio-box {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+/*
+Feed
+
+Styleguide 5.10
+*/
+/*
+Bio container
+
+#feed-container  - Feed container.
+
+Styleguide 5.10.1
+*/
+#feed-container {
+  margin-top: -64px;
+}
+@media only screen and (max-width: 1199px) {
+  #feed-container {
+    margin-top: -16px;
+    width: 100%;
+  }
+}
+/*
+Fedd boxes
+
+.feed-box  - Feed box.
+
+Styleguide 5.10.2
+*/
+.feed-box {
+  margin: 4px 4px 8px;
+}
+/* @media only screen and (max-width: 1199px) {
+  .feed-box {
+    width: 100%;
+  }
+} */

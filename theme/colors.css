@@ -50,6 +50,7 @@ button.diamond {
 }
 .diamond {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 }
 .diamond > svg {
   transition: transform 0.2s ease-in-out;
@@ -59,9 +60,11 @@ Diamond behavior
 
 Hover and click styles.
 
-:hover   - Change icon color.
-:focus   - Clicked style.
-:active  - Active style.
+.active  - Active button state.
+:hover   - Hover to change style.
+:focus   - On click style.
+:active  - Active clicked.
+:disabled  - Active clicked.
 
 Markup:
 <div class="mini-diamond__wrapper">
@@ -90,7 +93,9 @@ Styleguide 4.3.1
 }
 .diamond:active,
 .diamond.active {
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
+              0 1px 1px 0 rgba(0,0,0,.14),
+              0 1px 3px 0 rgba(0,0,0,.12);
   background-color: var(--black);
   transform: rotate(0deg);
   color: var(--yellow, #ffc107);
@@ -98,14 +103,22 @@ Styleguide 4.3.1
   border: 2px solid var(--yellow, #ffc107);
 }
 .diamond:visited {
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  outline: none;
+}
+.diamond:disabled {
+  cursor: default;
+  background-color: var(--dark-gray);
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
+              0 1px 1px 0 rgba(0,0,0,.14),
+              0 1px 3px 0 rgba(0,0,0,.12);
   transform: rotate(0deg);
-  color: var(--black, #222);
-  fill: var(--black, #222);
+  color: var(--light-black, #222);
+  fill: var(--light-black, #222);
   border: none;
 }
 .diamond:hover > svg,
 .diamond:focus > svg,
+.diamond:disabled > svg,
 .diamond.active > svg,
 .diamond:active > svg {
   transform: rotate(0);
@@ -169,13 +182,46 @@ Styleguide 4.4
   color: white;
   fill: white;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   .headline {
     color: var(--black, #222222);
     fill: var(--black, #222222);
   }
 }
 .headline > h3 {
+  color: var(--black, #222222);
+  fill: var(--black, #222222);
+}
+
+/*
+Feed boxes
+
+Styleguide 4.5
+*/
+.feed-box {
+  background-color: var(--light-gray);
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
+              0 1px 1px 0 rgba(0,0,0,.14),
+              0 1px 3px 0 rgba(0,0,0,.12);
+}
+/* @media only screen and (max-width: 1199px) {
+  .feed-box {
+  }
+} */
+
+/*
+Color backgrounds
+
+Markup:
+<div class="headline stay--on-light">
+  <h2>.stay--on-light.</h2>
+  <p>Set dark color for light backgrounds.</p>
+</div>
+
+Styleguide 4.99
+*/
+.b--amber {
+  background-color: var(--amber);
   color: var(--black, #222222);
   fill: var(--black, #222222);
 }
