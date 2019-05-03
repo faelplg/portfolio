@@ -181,8 +181,8 @@ Styleguide 5.5.2
   flex-flow: row;
   justify-content: center;
   background: transparent;
-  height: 215px;
-  width: 215px;
+  height: 210px;
+  width: 210px;
   /* border: 1px solid red; */
   z-index: 5;
 }
@@ -193,8 +193,8 @@ Styleguide 5.5.2
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  height: 150px;
-  width: 150px;
+  height: 140px;
+  width: 140px;
   margin: 0;
   transform: rotate(-45deg);
   z-index: 6;
@@ -204,7 +204,7 @@ Styleguide 5.5.2
 .mini-diamond > svg {
   transform: rotate(45deg);
 }
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .mini-diamond__wrapper {
     height: 130px;
     width: 130px;
@@ -212,20 +212,6 @@ Styleguide 5.5.2
   .mini-diamond {
     height: 90px;
     width: 90px;
-  }
-}
-/* .diamond--left {
-  margin-left: -102px;
-}
-.diamond--right {
-  margin-right: -102px;
-}
-@media only screen and (max-width: 767px) {
-  .diamond--left {
-    margin-left: -98px;
-  }
-  .diamond--right {
-    margin-right: -98px;
   }
 } */
 
@@ -263,19 +249,25 @@ Styleguide 5.6
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .headline > h2 {
   margin-top: 8px;
+}
+.headline > h3 {
+  margin-top: 32px;
 }
 @media only screen and (max-width: 767px) {
   .headline {
     align-items: center;
     justify-content: center;
   }
+  .headline > h3 {
+    margin-top: 16px;
+  }
 }
 #profile-headline {
-  margin: 0 8px 100px 8px;
+  margin: 0 8px 56px 8px;
 }
 @media only screen and (max-width: 767px) {
   #profile-headline {
@@ -316,5 +308,23 @@ Styleguide 5.8
     margin-top: 8px;
     align-items: center;
     flex-flow: column;
+  }
+}
+
+/*
+Feed boxes
+
+Styleguide 5.9
+*/
+.feed-box {
+  background-color: white;
+
+  margin: 8px 64px;
+  min-height: 300px;
+}
+@media only screen and (max-width: 767px) {
+  .feed-box {
+    margin: 8px 16px;
+    min-height: 300px;
   }
 }

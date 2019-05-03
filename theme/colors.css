@@ -44,7 +44,77 @@ Diamonds
 
 Styleguide 4.3
 */
+button.diamond {
+  padding: 0;
+  border: none;
+}
+.diamond {
+  cursor: pointer;
+}
+.diamond > svg {
+  transition: transform 0.2s ease-in-out;
+}
+/*
+Diamond behavior
 
+Hover and click styles.
+
+:hover   - Change icon color.
+:focus   - Clicked style.
+:active  - Active style.
+
+Markup:
+<div class="mini-diamond__wrapper">
+  <div class="mini-diamond diamond"></div>
+</div>
+
+Styleguide 4.3.1
+*/
+.diamond:hover {
+  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2),
+              0 14px 21px 2px rgba(0,0,0,.14),
+              0 5px 26px 4px rgba(0,0,0,.12);
+  background-color: var(--light-black);
+  transform: rotate(0deg);
+  color: var(--amber, #ffc107);
+  fill: var(--amber, #ffc107);
+  border: 2px solid var(--amber, #ffc107);
+}
+.diamond:focus {
+  background-color: var(--light-black);
+  color: var(--amber, #ffc107);
+  transform: rotate(0deg);
+  outline: none;
+  fill: var(--amber, #ffc107);
+  border: 2px solid var(--yellow, #ffc107);
+}
+.diamond:active,
+.diamond.active {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  background-color: var(--black);
+  transform: rotate(0deg);
+  color: var(--yellow, #ffc107);
+  fill: var(--yellow, #ffc107);
+  border: 2px solid var(--yellow, #ffc107);
+}
+.diamond:visited {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  transform: rotate(0deg);
+  color: var(--black, #222);
+  fill: var(--black, #222);
+  border: none;
+}
+.diamond:hover > svg,
+.diamond:focus > svg,
+.diamond.active > svg,
+.diamond:active > svg {
+  transform: rotate(0);
+}
+/** Dark diamond theme*/
+.diamond--dark {
+  background-color: var(--black, #222);
+  color: white;
+}
 /*
 Great diamond
 
@@ -55,7 +125,7 @@ Markup:
   <div class="great-diamond {{modifier_class}}"></div>
 </div>
 
-Styleguide 4.3.1
+Styleguide 4.3.2
 */
 .great-diamond {
   background-color: white;
@@ -72,7 +142,7 @@ Markup:
   <div class="mini-diamond {{modifier_class}}"></div>
 </div>
 
-Styleguide 4.3.2
+Styleguide 4.3.3
 */
 .mini-diamond {
   /* background-color: var(--light-gray, #eeeeee); */
@@ -81,12 +151,7 @@ Styleguide 4.3.2
   box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),
               0 7px 10px 1px rgba(0,0,0,.14),
               0 2px 16px 1px rgba(0,0,0,.12);
-}
-
-/** Dark diamond theme*/
-.diamond--dark {
-  background-color: var(--black, #222);
-  color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 /*
@@ -109,6 +174,10 @@ Styleguide 4.4
     color: var(--black, #222222);
     fill: var(--black, #222222);
   }
+}
+.headline > h3 {
+  color: var(--black, #222222);
+  fill: var(--black, #222222);
 }
 
 /*
