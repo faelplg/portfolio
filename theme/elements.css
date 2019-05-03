@@ -181,8 +181,9 @@ Styleguide 5.5.2
   flex-flow: row;
   justify-content: center;
   background: transparent;
-  height: 150px;
-  width: 150px;
+  height: 215px;
+  width: 215px;
+  /* border: 1px solid red; */
   z-index: 5;
 }
 .mini-diamond {
@@ -192,8 +193,8 @@ Styleguide 5.5.2
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   margin: 0;
   transform: rotate(-45deg);
   z-index: 6;
