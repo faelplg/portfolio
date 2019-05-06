@@ -3,7 +3,7 @@ Theme elements
 
 Color variables and main applications
 
-Styleguide 5
+Styleguide 2.3
 */
 
 /*
@@ -13,10 +13,11 @@ Theme divider.
 
 Markup: <hr>
 
-Styleguide 5.1
+Styleguide 2.3.1
 */
 hr {
-  border-top: 5px solid #999;
+  border-top-style: double;
+  border-top-width: 5px;
 }
 
 /*
@@ -34,7 +35,7 @@ Badge
 
 Markup: <span class="badge" style="background-color:lightgrey"></span>
 
-Styleguide 5.2
+Styleguide 2.3.2
 */
 .badge {
   align-items: center;
@@ -51,12 +52,16 @@ Styleguide 5.2
 /*
 Profile cover
 
-* **#profile-cover:** Profile cover image.
+* **cover_img:** Great Observatories Unique Views of the Milky Way. Credit to JPL, NASA/JPL-Caltech/ESA/CXC/STScI NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA12348.html).
+* **cover_img_01:** Jupiter Great Red Spot. Credit to JPL, NASA/JPL. [Image URL](https://images.nasa.gov/details-PIA01384.html).
+* **cover_img_02:** A Cauldron of Stars at the Galaxy Center. Credit to JPL, NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA03654.html).
+* **cover_img_03:** History of Hubble Space Telescope (HST). Credit to MSFC. [Image URL](https://images.nasa.gov/details-0302063.html).
+* **cover_img_04:** Comets Kick up Dust in Helix Nebula. Credit to JPL, NASA/JPL-Caltech/Univ.of Ariz. [Image URL](https://images.nasa.gov/details-PIA09178.html).
 
-Styleguide 5.3
+Styleguide 2.3.3
 */
 #profile-cover {
-  background: url('./assets/cover_img_01.jpg') center center no-repeat;
+  background: url('./assets/cover_img_04.jpg') center center no-repeat;
   background-size: cover;
 }
 #profile-cover--mask {
@@ -87,7 +92,7 @@ Profile header
 
 #profile-header - Profile header with picture, headline and status.
 
-Styleguide 5.4
+Styleguide 2.3.4
 */
 #profile-header {
   display: flex;
@@ -111,12 +116,12 @@ Diamonds
 * .great-diamond: Big diamond shaped div.
 * .mini-diamond: Small diamond shaped div.
 
-Styleguide 5.5
+Styleguide 2.3.5
 */
 /*
 Active diamonds
 
-Styleguide 5.5.1
+Styleguide 2.3.5.1
 */
 button.diamond {
   padding: 0;
@@ -145,7 +150,7 @@ Markup:
   <div class="great-diamond"></div>
 </div>
 
-Styleguide 5.5.2
+Styleguide 2.3.5.2
 */
 .great-diamond__wrapper {
   align-items: center;
@@ -193,7 +198,7 @@ Markup:
   <div class="mini-diamond"></div>
 </div>
 
-Styleguide 5.5.3
+Styleguide 2.3.5.3
 */
 .mini-diamond__wrapper {
   align-items: center;
@@ -240,7 +245,7 @@ Profile picture
 
 Profile picture shape.
 
-Styleguide 5.5.3
+Styleguide 2.3.5.4
 */
 .profile-picture {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -263,7 +268,7 @@ Markup:
   <h2>@faelplg</h2>
 </div>
 
-Styleguide 5.6
+Styleguide 2.3.6
 */
 .headline {
   display: flex;
@@ -298,7 +303,7 @@ Markup:
   <span class="badge">110</span>
 </div>
 
-Styleguide 5.7
+Styleguide 2.3.7
 */
 #profile-status {
   /* align-self: flex-end; */
@@ -310,7 +315,7 @@ Profile content
 
 #profile-content - Profile content.
 
-Styleguide 5.8
+Styleguide 2.3.8
 */
  #profile-content {
    display: flex;
@@ -328,7 +333,7 @@ Link container
 
 #link-container - Link container.
 
-Styleguide 5.8.1
+Styleguide 2.3.8.1
 */
  #link-container {
    min-width: 360px;
@@ -345,14 +350,14 @@ Styleguide 5.8.1
 /*
 Bio
 
-Styleguide 5.9
+Styleguide 2.3.9
 */
 /*
 Bio container
 
 #bio-container  - Feed container.
 
-Styleguide 5.9.1
+Styleguide 2.3.9.1
 */
 #bio-container {
   margin-top: -56px;
@@ -363,11 +368,11 @@ Styleguide 5.9.1
   }
 }
 /*
-Fedd boxes
+Bio boxes
 
 .bio-box  - Feed box.
 
-Styleguide 5.9.2
+Styleguide 2.3.9.2
 */
 .bio-box {
   min-width: 280px;
@@ -382,14 +387,14 @@ Styleguide 5.9.2
 /*
 Feed
 
-Styleguide 5.10
+Styleguide 2.3.10
 */
 /*
-Bio container
+Feed container
 
 #feed-container  - Feed container.
 
-Styleguide 5.10.1
+Styleguide 2.3.10.1
 */
 #feed-container {
   margin-top: -64px;
@@ -401,11 +406,11 @@ Styleguide 5.10.1
   }
 }
 /*
-Fedd boxes
+Feed boxes
 
 .feed-box  - Feed box.
 
-Styleguide 5.10.2
+Styleguide 2.3.10.2
 */
 .feed-box {
   margin: 4px 4px 8px;
