@@ -131,115 +131,16 @@ The diamonds are the main elements of the portfolio.
 They represent the main links for social networks and online tools for developers.
 Besides this, the diamond is the shape of the profile picture.
 
+.new-diamond--large  - Large diamond color.
+
+Markup:
+<div class="new-diamond {{modifier_class}}">
+  <div class="new-diamond__shape"></div>
+</div>
+
 Styleguide 2.1.4
 */
-button.diamond {
-  padding: 0;
-  border: none;
-  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
-}
-.diamond > svg {
-  transition: transform 0.2s ease-in-out;
-}
-/*
-Default diamond
-
-Hover and click styles.
-
-.active  - Active button state.
-
-Markup:
-<div class="mini-diamond__wrapper">
-  <div class="mini-diamond diamond {{modifier_class}}"></div>
-</div>
-
-Styleguide 2.1.4.1
-*/
-.diamond:hover {
-  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2),
-              0 14px 21px 2px rgba(0,0,0,.14),
-              0 5px 26px 4px rgba(0,0,0,.12);
-  background-color: var(--light-black);
-  transform: rotate(0deg);
-  color: var(--amber, #ffc107);
-  fill: var(--amber, #ffc107);
-  border: 2px solid var(--amber, #ffc107);
-}
-.diamond:focus {
-  background-color: var(--light-black);
-  color: var(--amber, #ffc107);
-  transform: rotate(0deg);
-  outline: none;
-  fill: var(--amber, #ffc107);
-  border: 2px solid var(--yellow, #ffc107);
-}
-.diamond:active,
-.diamond.active {
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
-              0 1px 1px 0 rgba(0,0,0,.14),
-              0 1px 3px 0 rgba(0,0,0,.12);
-  background-color: var(--black);
-  transform: rotate(0deg);
-  color: var(--yellow, #ffc107);
-  fill: var(--yellow, #ffc107);
-  border: 2px solid var(--yellow, #ffc107);
-}
-.diamond:visited {
-  outline: none;
-}
-.diamond:disabled {
-  cursor: default;
-  background-color: var(--dark-gray);
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
-              0 1px 1px 0 rgba(0,0,0,.14),
-              0 1px 3px 0 rgba(0,0,0,.12);
-  transform: rotate(0deg);
-  color: var(--light-black, #222);
-  fill: var(--light-black, #222);
-  border: none;
-}
-.diamond:hover > svg,
-.diamond:focus > svg,
-.diamond:disabled > svg,
-.diamond.active > svg,
-.diamond:active > svg {
-  transform: rotate(0);
-}
-/** Dark diamond theme*/
-.diamond--dark {
-  background-color: var(--black, #222);
-  color: white;
-}
-/*
-Great diamond
-
-.diamond--dark - Dark diamond theme
-
-Markup:
-<div class="great-diamond__wrapper">
-  <div class="great-diamond {{modifier_class}}"></div>
-</div>
-
-Styleguide 2.1.4.2
-*/
-.great-diamond {
-  background-color: white;
-  color: var(--black, #222);
-}
-
-/*
-Mini diamond
-
-.diamond--dark - Dark theme
-
-Markup:
-<div class="mini-diamond__wrapper">
-  <div class="mini-diamond {{modifier_class}}"></div>
-</div>
-
-Styleguide 2.1.4.3
-*/
-.mini-diamond {
+.new-diamond__shape {
   /* background-color: var(--light-gray, #eeeeee); */
   background-color: var(--gray, #eeeeee);
   color: var(--black, #222);
@@ -247,6 +148,80 @@ Styleguide 2.1.4.3
               0 7px 10px 1px rgba(0,0,0,.14),
               0 2px 16px 1px rgba(0,0,0,.12);
   transition: all 0.2s ease-in-out;
+}
+.new-diamond.new-diamond--large > .new-diamond__shape {
+  background-color: white;
+}
+
+/*
+Diamond button
+
+.new-diamond--primary  - Primary theme.
+.new-diamond--dark     - Dark theme.
+
+Markup:
+<button class="new-diamond {{modifier_class}}">
+  <div class="new-diamond__shape"></div>
+</button>
+
+Styleguide 2.1.4.1
+*/
+button.new-diamond {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+
+/** Primary theme */
+button.new-diamond.new-diamond--primary > .new-diamond__shape {
+  background-color: var(--amber, #ffc107);
+  color: var(--black, #222);
+  fill: var(--black, #222);
+}
+/** Dark theme*/
+button.new-diamond.new-diamond--dark > .new-diamond__shape {
+  background-color: var(--black, #222);
+  color: white;
+  fill: white;
+}
+
+/** Button behavior */
+button.new-diamond:hover > .new-diamond__shape {
+  box-shadow: 0 7px 9px -4px rgba(0,0,0,.2),
+              0 14px 21px 2px rgba(0,0,0,.14),
+              0 5px 26px 4px rgba(0,0,0,.12);
+  background-color: var(--light-black);
+  color: var(--amber, #ffc107);
+  fill: var(--amber, #ffc107);
+  border-color: var(--amber, #ffc107);
+}
+button.new-diamond:focus > .new-diamond__shape {
+  background-color: var(--light-black);
+  color: var(--amber, #ffc107);
+  outline: none;
+  fill: var(--amber, #ffc107);
+  border-color: var(--yellow, #ffc107);
+}
+button.new-diamond:active > .new-diamond__shape,
+button.new-diamond.active > .new-diamond__shape {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
+              0 1px 1px 0 rgba(0,0,0,.14),
+              0 1px 3px 0 rgba(0,0,0,.12);
+  background-color: var(--black);
+  color: var(--yellow, #ffc107);
+  fill: var(--yellow, #ffc107);
+  border-color: var(--yellow, #ffc107);
+}
+button.new-diamond:visited > .new-diamond__shape {
+  outline: none;
+}
+button.new-diamond:disabled > .new-diamond__shape {
+  background-color: var(--dark-gray);
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
+              0 1px 1px 0 rgba(0,0,0,.14),
+              0 1px 3px 0 rgba(0,0,0,.12);
+  color: var(--light-black, #222);
+  fill: var(--light-black, #222);
+  border: none;
 }
 
 /*

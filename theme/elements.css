@@ -33,7 +33,7 @@ Badge
 * margin: 4px;
 * width: 100px;
 
-Markup: <span class="badge" style="background-color:lightgrey"></span>
+Markup: <span class="badge"></span>
 
 Styleguide 2.3.2
 */
@@ -52,19 +52,38 @@ Styleguide 2.3.2
 /*
 Profile cover
 
-* **cover_img:** Great Observatories Unique Views of the Milky Way. Credit to JPL, NASA/JPL-Caltech/ESA/CXC/STScI NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA12348.html).
-* **cover_img_01:** Jupiter Great Red Spot. Credit to JPL, NASA/JPL. [Image URL](https://images.nasa.gov/details-PIA01384.html).
-* **cover_img_02:** A Cauldron of Stars at the Galaxy Center. Credit to JPL, NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA03654.html).
-* **cover_img_03:** History of Hubble Space Telescope (HST). Credit to MSFC. [Image URL](https://images.nasa.gov/details-0302063.html).
-* **cover_img_04:** Comets Kick up Dust in Helix Nebula. Credit to JPL, NASA/JPL-Caltech/Univ.of Ariz. [Image URL](https://images.nasa.gov/details-PIA09178.html).
+.cover--src    - Great Observatories Unique Views of the Milky Way. Credit to JPL, NASA/JPL-Caltech/ESA/CXC/STScI NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA12348.html).
+.cover--src-01 - Jupiter Great Red Spot. Credit to JPL, NASA/JPL. [Image URL](https://images.nasa.gov/details-PIA01384.html).
+.cover--src-02 - A Cauldron of Stars at the Galaxy Center. Credit to JPL, NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA03654.html).
+.cover--src-03 - History of Hubble Space Telescope (HST). Credit to MSFC. [Image URL](https://images.nasa.gov/details-0302063.html).
+.cover--src-04 - Comets Kick up Dust in Helix Nebula. Credit to JPL, NASA/JPL-Caltech/Univ.of Ariz. [Image URL](https://images.nasa.gov/details-PIA09178.html).
+
+Markup:
+<div class="box--shrink container container--raw cover {{modifier_class}}">
+  <div class="box cover__mask"></div>
+</div>
 
 Styleguide 2.3.3
 */
-#profile-cover {
-  background: url('./assets/cover_img_04.jpg') center center no-repeat;
+.cover {
   background-size: cover;
 }
-#profile-cover--mask {
+.cover.cover--src {
+  background: url('./assets/cover_img.jpg') center center no-repeat;
+}
+.cover.cover--src-01 {
+  background: url('./assets/cover_img_01.jpg') center center no-repeat;
+}
+.cover.cover--src-02 {
+  background: url('./assets/cover_img_02.jpg') center center no-repeat;
+}
+.cover.cover--src-03 {
+  background: url('./assets/cover_img_03.jpg') center center no-repeat;
+}
+.cover.cover--src-04 {
+  background: url('./assets/cover_img_04.jpg') center center no-repeat;
+}
+.cover__mask {
   color: #FAFAFA;
   height: 300px;
   /** Gradient - bottom */
@@ -74,18 +93,6 @@ Styleguide 2.3.3
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
 }
-/** Gradient - top */
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.95+0,0+100 */
-/* @media only screen and (max-width: 1199px) {
-  #profile-cover--mask {
-    align-items: flex-start;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 100%);
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%,rgba(0,0,0,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#00000000',GradientType=0 );
-    height: 200px;
-  }
-} */
 
 /*
 Profile header
@@ -112,95 +119,18 @@ Styleguide 2.3.4
 /*
 Diamonds
 
-* .diamond__wrapper: Wrapper for clearfix.
-* .great-diamond: Big diamond shaped div.
-* .mini-diamond: Small diamond shaped div.
+The diamonds are the main elements of the portfolio.
+They represent the main links for social networks and online tools for developers.
+Besides this, the diamond is the shape of the profile picture.
+
+Markup:
+<div class="new-diamond">
+  <div class="new-diamond__shape"></div>
+</div>
 
 Styleguide 2.3.5
 */
-/*
-Active diamonds
-
-Styleguide 2.3.5.1
-*/
-button.diamond {
-  padding: 0;
-  border: none;
-}
-.diamond {
-  cursor: pointer;
-}
-#profile-diamonds {
-  margin-left: 50px;
-}
-@media only screen and (max-width: 1199px) {
-  #profile-diamonds {
-    margin-left: 0;
-  }
-}
-
-/*
-Great diamonds
-
-* '.great-diamond__wrapper': Normalize used space.
-* '.great-diamond': Big diamonds.
-
-Markup:
-<div class="great-diamond__wrapper">
-  <div class="great-diamond"></div>
-</div>
-
-Styleguide 2.3.5.2
-*/
-.great-diamond__wrapper {
-  align-items: center;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  background: transparent;
-  height: 250px;
-  width: 250px;
-  z-index: 7;
-}
-.great-diamond {
-  display: flex;
-  -ms-flex-flow: row;
-  -webkit-flex-flow: row;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
-  height: 175px;
-  width: 175px;
-  margin: 0;
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
-  transform: rotate(-45deg);
-  z-index: 6;
-}
-@media only screen and (max-width: 1199px) {
-  .great-diamond__wrapper {
-    height: 195px;
-    width: 195px;
-  }
-  .great-diamond {
-    height: 130px;
-    width: 130px;
-  }
-}
-
-/*
-Mini diamonds
-
-* '.mini-diamond__wrapper': Normalize used space.
-* '.mini-diamond': Small diamonds.
-
-Markup:
-<div class="mini-diamond__wrapper">
-  <div class="mini-diamond"></div>
-</div>
-
-Styleguide 2.3.5.3
-*/
-.mini-diamond__wrapper {
+.new-diamond {
   align-items: center;
   display: flex;
   flex-flow: row;
@@ -211,7 +141,7 @@ Styleguide 2.3.5.3
   /* border: 1px solid red; */
   z-index: 5;
 }
-.mini-diamond {
+.new-diamond__shape {
   display: flex;
   -ms-flex-flow: row;
   -webkit-flex-flow: row;
@@ -226,17 +156,116 @@ Styleguide 2.3.5.3
   /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
   /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
-.mini-diamond > svg {
+.new-diamond__shape > svg {
   transform: rotate(45deg);
 }
 @media only screen and (max-width: 599px) {
-  .mini-diamond__wrapper {
+  .new-diamond {
     height: 225px;
     width: 225px;
   }
-  .mini-diamond {
+  .new-diamond__shape {
     height: 150px;
     width: 150px;
+  }
+}
+/*
+Large diamond
+
+Markup:
+<div class="new-diamond new-diamond--large">
+  <div class="new-diamond__shape"></div>
+</div>
+
+Styleguide 2.3.5.1
+*/
+.new-diamond--large {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  background: transparent;
+  height: 250px;
+  width: 250px;
+  z-index: 7;
+}
+.new-diamond.new-diamond--large > .new-diamond__shape {
+  display: flex;
+  -ms-flex-flow: row;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  height: 175px;
+  width: 175px;
+  margin: 0;
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  transform: rotate(-45deg);
+  z-index: 6;
+}
+@media only screen and (max-width: 1199px) {
+  .new-diamond.new-diamond--large {
+    height: 195px;
+    width: 195px;
+  }
+  .new-diamond.new-diamond--large > .new-diamond__shape {
+    height: 130px;
+    width: 130px;
+  }
+}
+
+/*
+Diamond button
+
+<button class="new-diamond">
+  <div class="new-diamond__shape"></div>
+</button>
+
+Styleguide 2.3.5.2
+*/
+button.new-diamond {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+button.new-diamond > svg {
+  transition: transform 0.2s ease-in-out;
+}
+button.new-diamond:hover > .new-diamond__shape {
+  transform: rotate(0deg);
+  border-style: solid;
+  border-width: 2px;
+}
+button.new-diamond:focus > .new-diamond__shape {
+  transform: rotate(0deg);
+  border-style: solid;
+  border-width: 2px;
+}
+button.new-diamond:active > .new-diamond__shape,
+button.new-diamond.active > .new-diamond__shape {
+  transform: rotate(0deg);
+  border-style: solid;
+  border-width: 2px;
+}
+button.new-diamond:disabled > .new-diamond__shape {
+  cursor: default;
+  transform: rotate(0deg);
+}
+button.new-diamond:hover > .new-diamond__shape > svg,
+button.new-diamond:focus > .new-diamond__shape > svg,
+button.new-diamond:disabled > .new-diamond__shape > svg,
+button.new-diamond.active > .new-diamond__shape > svg,
+button.new-diamond:active > .new-diamond__shape > svg {
+  transform: rotate(0);
+}
+
+
+#profile-diamonds {
+  margin-left: 50px;
+}
+@media only screen and (max-width: 1199px) {
+  #profile-diamonds {
+    margin-left: 0;
   }
 }
 
@@ -245,7 +274,7 @@ Profile picture
 
 Profile picture shape.
 
-Styleguide 2.3.5.4
+Styleguide 2.3.5.5
 */
 .profile-picture {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);

@@ -84,9 +84,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+/** Disabled body line-height. */
 /* body {
 	line-height: 1;
 } */
+/** Reset button:focus outline. */
+button:focus {
+  outline: none;
+}
 ol, ul {
 	list-style: none;
 }
