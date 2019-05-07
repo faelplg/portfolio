@@ -401,6 +401,7 @@ Styleguide 2.3.10.1
 }
 @media only screen and (max-width: 1199px) {
   #feed-container {
+    order: -1;
     margin-top: -16px;
     width: 100%;
   }

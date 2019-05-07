@@ -12,7 +12,10 @@
 import readme from './README.md';
 import './style.css';
 import profileImg from './theme/assets/profile_pic_thumb.jpg';
-import coverImg from './theme/assets/cover_img_01.jpg';
+import coverImg from './theme/assets/cover_img.jpg';
+import coverImg01 from './theme/assets/cover_img_01.jpg';
+import coverImg02 from './theme/assets/cover_img_02.jpg';
+import coverImg03 from './theme/assets/cover_img_03.jpg';
 
 const diamondButtons = document.querySelectorAll('button.new-diamond');
 diamondButtons.forEach(button => {

@@ -215,7 +215,8 @@ button.new-diamond:not(:disabled):visited > .new-diamond__shape {
   outline: none;
 }
 button.new-diamond:disabled > .new-diamond__shape {
-  background-color: var(--light-gray, #d1d1d1);
+  background-color: var(--amber, #ffc107);
+  /* background-color: var(--light-gray, #d1d1d1); */
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
               0 1px 1px 0 rgba(0,0,0,.14),
               0 1px 3px 0 rgba(0,0,0,.12);

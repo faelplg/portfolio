@@ -199,6 +199,9 @@ Styleguide 1.6
 .box--shrink {
   flex: initial;
 }
+.box--first {
+  order: -1;
+}
 
 /*
 Flexible alignment
