@@ -185,7 +185,7 @@ button.new-diamond.new-diamond--dark > .new-diamond__shape {
 }
 
 /** Button behavior */
-button.new-diamond:hover > .new-diamond__shape {
+button.new-diamond:not(:disabled):hover > .new-diamond__shape {
   box-shadow: 0 7px 9px -4px rgba(0,0,0,.2),
               0 14px 21px 2px rgba(0,0,0,.14),
               0 5px 26px 4px rgba(0,0,0,.12);
@@ -194,43 +194,46 @@ button.new-diamond:hover > .new-diamond__shape {
   fill: var(--amber, #ffc107);
   border-color: var(--amber, #ffc107);
 }
-button.new-diamond:focus > .new-diamond__shape {
-  background-color: var(--light-black);
+button.new-diamond:not(:disabled):focus > .new-diamond__shape {
+  background-color: var(--light-black, #666);
   color: var(--amber, #ffc107);
   outline: none;
   fill: var(--amber, #ffc107);
   border-color: var(--yellow, #ffc107);
 }
-button.new-diamond:active > .new-diamond__shape,
-button.new-diamond.active > .new-diamond__shape {
+button.new-diamond:not(:disabled):active > .new-diamond__shape,
+button.new-diamond:not(:disabled).active > .new-diamond__shape {
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
               0 1px 1px 0 rgba(0,0,0,.14),
               0 1px 3px 0 rgba(0,0,0,.12);
-  background-color: var(--black);
+  background-color: var(--black, #222);
   color: var(--yellow, #ffc107);
   fill: var(--yellow, #ffc107);
   border-color: var(--yellow, #ffc107);
 }
-button.new-diamond:visited > .new-diamond__shape {
+button.new-diamond:not(:disabled):visited > .new-diamond__shape {
   outline: none;
 }
 button.new-diamond:disabled > .new-diamond__shape {
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray, #d1d1d1);
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
               0 1px 1px 0 rgba(0,0,0,.14),
               0 1px 3px 0 rgba(0,0,0,.12);
-  color: var(--light-black, #222);
-  fill: var(--light-black, #222);
+  color: var(--light-gray, #666);
+  fill: var(--light-gray, #666);
   border: none;
 }
 
 /*
 Headline
 
+.stay--on-light  - Force text to stay visible on light backgrounds.
+
 Markup:
-<div class="headline stay--on-light">
+<div class="headline {{modifier_class}}">
   <h1>Rafael Goulart</h1>
   <h2>@faelplg</h2>
+  <h3>Front End SW Engineer</h2>
 </div>
 
 Styleguide 2.1.5

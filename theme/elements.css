@@ -93,6 +93,11 @@ Styleguide 2.3.3
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
 }
+@media only screen and (max-width: 599px) and (max-height: 480px) {
+  .cover__mask {
+    height: 180px;
+  }
+}
 
 /*
 Profile header
@@ -104,15 +109,16 @@ Styleguide 2.3.4
 #profile-header {
   display: flex;
   flex-flow: row;
-  /* justify-content: center; */
   align-items: center;
-  margin-top: -133px;
+  margin-top: -150px;
+  padding: 0 75px;
 }
 @media only screen and (max-width: 1199px) {
   #profile-header {
     flex-flow: column;
     align-items: center;
     margin-top: -107px;
+    padding: 0;
   }
 }
 
@@ -123,13 +129,23 @@ The diamonds are the main elements of the portfolio.
 They represent the main links for social networks and online tools for developers.
 Besides this, the diamond is the shape of the profile picture.
 
+.new-diamond--large  - Large size of the diamond.
+
 Markup:
-<div class="new-diamond">
+<div class="new-diamond {{modifier_class}}">
   <div class="new-diamond__shape"></div>
 </div>
 
 Styleguide 2.3.5
 */
+/* #profile-diamonds {
+  margin-left: 50px;
+}
+@media only screen and (max-width: 1199px) {
+  #profile-diamonds {
+    margin-left: 0;
+  }
+} */
 .new-diamond {
   align-items: center;
   display: flex;
@@ -161,24 +177,25 @@ Styleguide 2.3.5
 }
 @media only screen and (max-width: 599px) {
   .new-diamond {
-    height: 225px;
-    width: 225px;
+    height: 195px;
+    width: 195px;
   }
   .new-diamond__shape {
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
   }
 }
-/*
-Large diamond
-
-Markup:
-<div class="new-diamond new-diamond--large">
-  <div class="new-diamond__shape"></div>
-</div>
-
-Styleguide 2.3.5.1
-*/
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
+  .new-diamond {
+    height: 206px;
+    width: 206px;
+  }
+  .new-diamond__shape {
+    height: 140px;
+    width: 140px;
+  }
+}
+/** Large diamond */
 .new-diamond--large {
   align-items: center;
   display: flex;
@@ -187,6 +204,7 @@ Styleguide 2.3.5.1
   background: transparent;
   height: 250px;
   width: 250px;
+  margin: 16px;
   z-index: 7;
 }
 .new-diamond.new-diamond--large > .new-diamond__shape {
@@ -207,6 +225,7 @@ Styleguide 2.3.5.1
   .new-diamond.new-diamond--large {
     height: 195px;
     width: 195px;
+    margin: 0;
   }
   .new-diamond.new-diamond--large > .new-diamond__shape {
     height: 130px;
@@ -221,7 +240,7 @@ Diamond button
   <div class="new-diamond__shape"></div>
 </button>
 
-Styleguide 2.3.5.2
+Styleguide 2.3.5.1
 */
 button.new-diamond {
   padding: 0;
@@ -231,59 +250,51 @@ button.new-diamond {
 button.new-diamond > svg {
   transition: transform 0.2s ease-in-out;
 }
-button.new-diamond:hover > .new-diamond__shape {
-  transform: rotate(0deg);
+button.new-diamond:not(:disabled):hover > .new-diamond__shape {
+  /* transform: rotate(0deg); */
   border-style: solid;
   border-width: 2px;
 }
-button.new-diamond:focus > .new-diamond__shape {
-  transform: rotate(0deg);
+button.new-diamond:not(:disabled):focus > .new-diamond__shape {
+  /* transform: rotate(0deg); */
   border-style: solid;
   border-width: 2px;
 }
-button.new-diamond:active > .new-diamond__shape,
-button.new-diamond.active > .new-diamond__shape {
-  transform: rotate(0deg);
+button.new-diamond:not(:disabled):active > .new-diamond__shape,
+button.new-diamond:not(:disabled).active > .new-diamond__shape {
+  /* transform: rotate(0deg); */
   border-style: solid;
   border-width: 2px;
+}
+button.new-diamond:disabled {
+  z-index: 0;
 }
 button.new-diamond:disabled > .new-diamond__shape {
   cursor: default;
-  transform: rotate(0deg);
+  /* transform: rotate(0deg); */
 }
-button.new-diamond:hover > .new-diamond__shape > svg,
-button.new-diamond:focus > .new-diamond__shape > svg,
-button.new-diamond:disabled > .new-diamond__shape > svg,
-button.new-diamond.active > .new-diamond__shape > svg,
-button.new-diamond:active > .new-diamond__shape > svg {
+/* button.new-diamond:not(:disabled):hover > .new-diamond__shape > svg,
+button.new-diamond:not(:disabled):focus > .new-diamond__shape > svg,
+button.new-diamond:not(:disabled).active > .new-diamond__shape > svg,
+button.new-diamond:not(:disabled):active > .new-diamond__shape > svg {
   transform: rotate(0);
-}
-
-
-#profile-diamonds {
-  margin-left: 50px;
-}
-@media only screen and (max-width: 1199px) {
-  #profile-diamonds {
-    margin-left: 0;
-  }
-}
+} */
 
 /*
 Profile picture
 
 Profile picture shape.
 
-Styleguide 2.3.5.5
+Styleguide 2.3.5.3
 */
-.profile-picture {
+img.profile-picture {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   height: 225px;
   transform: rotate(45deg);
   z-index: 5;
 }
 @media only screen and (max-width: 1199px) {
-  .profile-picture {
+  img.profile-picture {
     height: 170px;
   }
 }
@@ -295,10 +306,19 @@ Markup:
 <div class="headline stay--on-light">
   <h1>Rafael Goulart</h1>
   <h2>@faelplg</h2>
+  <h3>Front End SW Engineer</h2>
 </div>
 
 Styleguide 2.3.6
 */
+#profile-headline {
+  margin: 0 8px 43px 8px;
+}
+@media only screen and (max-width: 1199px) {
+  #profile-headline {
+    margin: 0;
+  }
+}
 .headline {
   display: flex;
   flex-flow: column;
@@ -314,37 +334,13 @@ Styleguide 2.3.6
     margin-top: 16px;
   }
 }
-#profile-headline {
-  margin: 0 8px 43px 8px;
-}
-@media only screen and (max-width: 1199px) {
-  #profile-headline {
-    margin: 0;
-  }
-}
-
-/*
-Profile status
-
-Markup:
-<div style="display:flex;flex-flow:row;align-items:Center;justify-content:flex-end;">
-  <span class="badge">110</span>
-  <span class="badge">110</span>
-</div>
-
-Styleguide 2.3.7
-*/
-#profile-status {
-  /* align-self: flex-end; */
-  margin-top: 64px;
-}
 
 /*
 Profile content
 
 #profile-content - Profile content.
 
-Styleguide 2.3.8
+Styleguide 2.3.7
 */
  #profile-content {
    display: flex;
@@ -362,57 +358,32 @@ Link container
 
 #link-container - Link container.
 
-Styleguide 2.3.8.1
+Styleguide 2.3.7.1
 */
- #link-container {
-   min-width: 360px;
-   margin-top: -100px;
- }
-@media only screen and (max-width: 1199px) {
+#link-container {
+  margin-top: -90px;
+}
+#link-container > .container--odd {
+  margin-top: -75px;
+}
+#link-container > .container--even {
+  margin-top: -75px;
+}
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
   #link-container {
     margin-top: 0;
-    min-width: 240px;
-    max-width: 280px;
+  }
+}
+@media only screen and (max-width: 599px) {
+  #link-container > .container--even {
+    display: none;
+  }
+  #link-container,
+  #link-container > .container--odd {
+    margin-top: 0px;
   }
 }
 
-/*
-Bio
-
-Styleguide 2.3.9
-*/
-/*
-Bio container
-
-#bio-container  - Feed container.
-
-Styleguide 2.3.9.1
-*/
-#bio-container {
-  margin-top: -56px;
-}
-@media only screen and (max-width: 1199px) {
-  #bio-container {
-    margin-top: -16px;
-  }
-}
-/*
-Bio boxes
-
-.bio-box  - Feed box.
-
-Styleguide 2.3.9.2
-*/
-.bio-box {
-  min-width: 280px;
-  max-width: 380px;
-}
-@media only screen and (max-width: 1199px) {
-  .bio-box {
-    min-width: 0;
-    max-width: 100%;
-  }
-}
 /*
 Feed
 
@@ -426,7 +397,7 @@ Feed container
 Styleguide 2.3.10.1
 */
 #feed-container {
-  margin-top: -64px;
+  margin-top: -100px;
 }
 @media only screen and (max-width: 1199px) {
   #feed-container {

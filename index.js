@@ -14,4 +14,24 @@ import './style.css';
 import profileImg from './theme/assets/profile_pic_thumb.jpg';
 import coverImg from './theme/assets/cover_img_01.jpg';
 
-console.log('Profile page.', profileImg);
+const diamondButtons = document.querySelectorAll('button.new-diamond');
+diamondButtons.forEach(button => {
+  button.addEventListener("click", function(){
+    switch (this.childNodes[1].childNodes[3].id) {
+      case 'github-icon':
+        window.open(`https://github.com/faelplg`,'_blank');
+        break;
+      case 'medium-icon':
+        window.open(`https://medium.com/@faelplg`,'_blank');
+        break;
+      case 'codepen-icon':
+        window.open(`https://codepen.io/faelplg/`,'_blank');
+        break;
+      case 'stackblitz-icon':
+        window.open(`https://stackblitz.com/@faelplg`,'_blank');
+        break;
+      default:
+
+    }
+  }, false);
+});

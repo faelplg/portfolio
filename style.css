@@ -132,6 +132,7 @@ body{
 section,
 .wrapper {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 /* Native containers. */
 div, section, header, aside, fieldset {
