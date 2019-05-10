@@ -106,21 +106,21 @@ Profile header
 
 Styleguide 2.3.4
 */
-#profile-header {
+/* #profile-header {
   display: flex;
   flex-flow: row;
   align-items: center;
   margin-top: -150px;
   padding: 0 75px;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1199px) { */
   #profile-header {
     flex-flow: column;
     align-items: center;
-    margin-top: -107px;
+    margin-top: -150px;
     padding: 0;
   }
-}
+/* } */
 
 /*
 Diamonds
@@ -187,12 +187,12 @@ Styleguide 2.3.5
 }
 @media only screen and (min-width: 600px) and (max-width: 1199px) {
   .new-diamond {
-    height: 206px;
-    width: 206px;
+    height: 160px;
+    width: 160px;
   }
   .new-diamond__shape {
-    height: 140px;
-    width: 140px;
+    height: 100px;
+    width: 100px;
   }
 }
 /** Large diamond */
@@ -312,7 +312,7 @@ Markup:
 Styleguide 2.3.6
 */
 #profile-headline {
-  margin: 0 8px 43px 8px;
+  margin: -32px 8px 0;
 }
 @media only screen and (max-width: 1199px) {
   #profile-headline {
@@ -322,8 +322,10 @@ Styleguide 2.3.6
 .headline {
   display: flex;
   flex-flow: column;
-  align-items: flex-start;
+  align-items: center;
+  /* align-items: flex-start; */
   justify-content: center;
+  /* justify-content: center; */
 }
 @media only screen and (max-width: 1199px) {
   .headline {
@@ -342,44 +344,22 @@ Profile content
 
 Styleguide 2.3.7
 */
- #profile-content {
-   display: flex;
-   flex-flow: row;
- }
-@media only screen and (max-width: 1199px) {
-  #profile-content {
-    flex-flow: column;
-    margin-top: 8px;
-    align-items: center;
+#profile-links {
+  margin-top: -20px;
+}
+
+@media only screen and (max-width: 599px) {
+  #profile-links {
+    margin-top: 0px;
   }
-}
-/*
-Link container
-
-#link-container - Link container.
-
-Styleguide 2.3.7.1
-*/
-#link-container {
-  margin-top: -90px;
-}
-#link-container > .container--odd {
-  margin-top: -75px;
-}
-#link-container > .container--even {
-  margin-top: -75px;
 }
 @media only screen and (min-width: 600px) and (max-width: 1199px) {
-  #link-container {
-    margin-top: 0;
+  #profile-links {
+    margin-top: 0px;
   }
 }
-@media only screen and (max-width: 599px) {
-  #link-container > .container--even {
-    display: none;
-  }
-  #link-container,
-  #link-container > .container--odd {
+@media only screen and (max-width: 1199px) {
+  #profile-links {
     margin-top: 0px;
   }
 }
@@ -387,37 +367,16 @@ Styleguide 2.3.7.1
 /*
 Feed
 
-Styleguide 2.3.10
+Styleguide 2.3.8
 */
-/*
-Feed container
-
-#feed-container  - Feed container.
-
-Styleguide 2.3.10.1
-*/
-#feed-container {
-  margin-top: -100px;
-}
-@media only screen and (max-width: 1199px) {
-  #feed-container {
-    order: -1;
-    margin-top: -16px;
-    width: 100%;
-  }
-}
 /*
 Feed boxes
 
 .feed-box  - Feed box.
 
-Styleguide 2.3.10.2
+Styleguide 2.3.8.1
 */
 .feed-box {
-  margin: 4px 4px 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
-/* @media only screen and (max-width: 1199px) {
-  .feed-box {
-    width: 100%;
-  }
-} */

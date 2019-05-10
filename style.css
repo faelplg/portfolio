@@ -107,6 +107,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /*
 Wrapper
@@ -181,6 +185,29 @@ Styleguide 1.5
 @media only screen and (max-width: 599px) {
   .container--responsive {
     flex-flow: column;
+  }
+}
+.container--center {
+  margin-left: 33%;
+  margin-right: 33%;
+}
+/* --tablet-landscape-max */
+@media only screen and (min-width: 1199px) {
+  .container--center {
+    margin-left: 23%;
+    margin-right: 23%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
+  .container--center {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .container--center {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 

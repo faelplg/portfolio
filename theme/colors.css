@@ -59,6 +59,22 @@ body,
 }
 
 /*
+Links
+
+<a href="##">Link example.</a>
+
+Styleguide 2.1.2.1
+*/
+a {
+  color: var(--purple, purple);
+}
+a:hover {
+  color: #451869;
+}
+a:focus {
+  outline: none;
+}
+/*
 Badge
 
 Markup: <span class="badge {{modifier_class}}"></span>
@@ -240,8 +256,10 @@ Markup:
 Styleguide 2.1.5
 */
 .headline {
-  color: white;
-  fill: white;
+  color: var(--black, #222222);
+  /* color: white; */
+  fill: var(--black, #222222);
+  /* fill: white; */
 }
 @media only screen and (max-width: 1199px) {
   .headline {
@@ -259,12 +277,12 @@ Feed boxes
 
 Styleguide 2.1.6
 */
-.feed-box {
+/* .feed-box {
   background-color: var(--light-gray);
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
               0 1px 1px 0 rgba(0,0,0,.14),
               0 1px 3px 0 rgba(0,0,0,.12);
-}
+} */
 /* @media only screen and (max-width: 1199px) {
   .feed-box {
   }
