@@ -189,7 +189,7 @@ button.new-diamond {
 
 /** Primary theme */
 button.new-diamond.new-diamond--primary > .new-diamond__shape {
-  background-color: var(--amber, #ffc107);
+  background-color: var(--purple, #ffc107);
   color: var(--black, #222);
   fill: var(--black, #222);
 }
@@ -205,33 +205,31 @@ button.new-diamond:not(:disabled):hover > .new-diamond__shape {
   box-shadow: 0 7px 9px -4px rgba(0,0,0,.2),
               0 14px 21px 2px rgba(0,0,0,.14),
               0 5px 26px 4px rgba(0,0,0,.12);
-  background-color: var(--light-black);
-  color: var(--amber, #ffc107);
-  fill: var(--amber, #ffc107);
-  border-color: var(--amber, #ffc107);
+  background-color: var(--gray);
+  color: var(--purple, #ffc107);
+  fill: var(--purple, #ffc107);
+  border-color: var(--purple, #ffc107);
 }
 button.new-diamond:not(:disabled):focus > .new-diamond__shape {
-  background-color: var(--light-black, #666);
-  color: var(--amber, #ffc107);
+  background-color: var(--gray, #666);
+  color: var(--purple, #ffc107);
   outline: none;
-  fill: var(--amber, #ffc107);
-  border-color: var(--yellow, #ffc107);
+  fill: var(--purple, #ffc107);
+  border-color: var(--purple, #ffc107);
 }
 button.new-diamond:not(:disabled):active > .new-diamond__shape,
 button.new-diamond:not(:disabled).active > .new-diamond__shape {
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
-              0 1px 1px 0 rgba(0,0,0,.14),
-              0 1px 3px 0 rgba(0,0,0,.12);
-  background-color: var(--black, #222);
-  color: var(--yellow, #ffc107);
-  fill: var(--yellow, #ffc107);
-  border-color: var(--yellow, #ffc107);
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--purple, #ffc107);
+  fill: var(--purple, #ffc107);
+  border-color: transparent;
 }
 button.new-diamond:not(:disabled):visited > .new-diamond__shape {
   outline: none;
 }
 button.new-diamond:disabled > .new-diamond__shape {
-  background-color: var(--amber, #ffc107);
+  background-color: var(--purple, #ffc107);
   /* background-color: var(--light-gray, #d1d1d1); */
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
               0 1px 1px 0 rgba(0,0,0,.14),
@@ -261,7 +259,7 @@ Styleguide 2.1.5
   fill: var(--black, #222222);
   /* fill: white; */
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1279px) {
   .headline {
     color: var(--black, #222222);
     fill: var(--black, #222222);
@@ -273,20 +271,21 @@ Styleguide 2.1.5
 }
 
 /*
-Feed boxes
+List
+
+Markup:
+<ul class="list list--single">
+  <li><h3>Front End Engineer</h3></li>
+  <li><h3>Web Application Architect</h3></li>
+  <li><h3>CTO at <a href="https://www.residuall.com/" target="_blank" aria-label="Residuall website" title="Residuall website.">Residuall</a></h3></li>
+</ul>
 
 Styleguide 2.1.6
 */
-/* .feed-box {
-  background-color: var(--light-gray);
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
-              0 1px 1px 0 rgba(0,0,0,.14),
-              0 1px 3px 0 rgba(0,0,0,.12);
-} */
-/* @media only screen and (max-width: 1199px) {
-  .feed-box {
-  }
-} */
+ul.list > li > span {
+  color: var(--light-black, #666);
+  fill: var(--light-black, #666);
+}
 
 /*
 Color backgrounds

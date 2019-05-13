@@ -6,6 +6,8 @@ body {
 
 h1, h2 {
   font-family: 'Kreon', serif;
+}
+h1, h2, h3 {
   margin: 0;
 }
 
@@ -19,7 +21,7 @@ p {
   text-align: left;
   margin: 8px 0;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1279px) {
   p {
     text-align: left;
   }

@@ -42,11 +42,17 @@ Styleguide 2.3.2
   border-radius: 18px;
   display: flex;
   flex-flow: row;
-  font-size: 20px;
+  font-size: 13px;
   height: 40px;
   justify-content: center;
   margin: 4px;
-  width: 100px;
+  padding: 4px 16px;
+  width: auto;
+}
+.badge--raised {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
+              0 2px 2px 0 rgba(0,0,0,.14),
+              0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 /*
@@ -66,24 +72,30 @@ Markup:
 Styleguide 2.3.3
 */
 .cover {
-  background-size: cover;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
 .cover.cover--src {
-  background: url('./assets/cover_img.jpg') center center no-repeat;
+  background-image: url('./assets/cover_img.jpg');
 }
 .cover.cover--src-01 {
-  background: url('./assets/cover_img_01.jpg') center center no-repeat;
+  background-image: url('./assets/cover_img_01.jpg');
 }
 .cover.cover--src-02 {
-  background: url('./assets/cover_img_02.jpg') center center no-repeat;
+  background-image: url('./assets/cover_img_02.jpg');
 }
 .cover.cover--src-03 {
-  background: url('./assets/cover_img_03.jpg') center center no-repeat;
+  background-image: url('./assets/cover_img_03.jpg');
 }
 .cover.cover--src-04 {
-  background: url('./assets/cover_img_04.jpg') center center no-repeat;
+  background-image: url('./assets/cover_img_04.jpg');
 }
-.cover__mask {
+.cover.cover--src-05 {
+  background-image: url('./assets/cover_img_05.jpg');
+}
+.cover > .cover__mask {
   color: #FAFAFA;
   height: 300px;
   /** Gradient - bottom */
@@ -93,34 +105,21 @@ Styleguide 2.3.3
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
 }
-@media only screen and (max-width: 599px) and (max-height: 480px) {
-  .cover__mask {
+@media only screen and (max-width: 599px) {
+  .cover > .cover__mask {
     height: 180px;
   }
 }
-
-/*
-Profile header
-
-#profile-header - Profile header with picture, headline and status.
-
-Styleguide 2.3.4
-*/
-/* #profile-header {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  margin-top: -150px;
-  padding: 0 75px;
-}
-@media only screen and (max-width: 1199px) { */
-  #profile-header {
-    flex-flow: column;
-    align-items: center;
-    margin-top: -150px;
-    padding: 0;
+@media only screen and (max-width: 599px) {
+  .cover {
+    background-size: cover;
   }
-/* } */
+}
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
+  .cover {
+    background-size: cover;
+  }
+}
 
 /*
 Diamonds
@@ -136,16 +135,8 @@ Markup:
   <div class="new-diamond__shape"></div>
 </div>
 
-Styleguide 2.3.5
+Styleguide 2.3.4
 */
-/* #profile-diamonds {
-  margin-left: 50px;
-}
-@media only screen and (max-width: 1199px) {
-  #profile-diamonds {
-    margin-left: 0;
-  }
-} */
 .new-diamond {
   align-items: center;
   display: flex;
@@ -185,7 +176,7 @@ Styleguide 2.3.5
     width: 130px;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1199px) {
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
   .new-diamond {
     height: 160px;
     width: 160px;
@@ -217,11 +208,13 @@ Styleguide 2.3.5
   height: 175px;
   width: 175px;
   margin: 0;
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2),
+              0 24px 38px 3px rgba(0,0,0,.14),
+              0 9px 46px 8px rgba(0,0,0,.12);
   transform: rotate(-45deg);
   z-index: 6;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1279px) {
   .new-diamond.new-diamond--large {
     height: 195px;
     width: 195px;
@@ -240,7 +233,7 @@ Diamond button
   <div class="new-diamond__shape"></div>
 </button>
 
-Styleguide 2.3.5.1
+Styleguide 2.3.4.1
 */
 button.new-diamond {
   padding: 0;
@@ -273,19 +266,13 @@ button.new-diamond:disabled > .new-diamond__shape {
   cursor: default;
   /* transform: rotate(0deg); */
 }
-/* button.new-diamond:not(:disabled):hover > .new-diamond__shape > svg,
-button.new-diamond:not(:disabled):focus > .new-diamond__shape > svg,
-button.new-diamond:not(:disabled).active > .new-diamond__shape > svg,
-button.new-diamond:not(:disabled):active > .new-diamond__shape > svg {
-  transform: rotate(0);
-} */
 
 /*
 Profile picture
 
 Profile picture shape.
 
-Styleguide 2.3.5.3
+Styleguide 2.3.4.2
 */
 img.profile-picture {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -293,7 +280,7 @@ img.profile-picture {
   transform: rotate(45deg);
   z-index: 5;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1279px) {
   img.profile-picture {
     height: 170px;
   }
@@ -309,16 +296,8 @@ Markup:
   <h3>Front End SW Engineer</h2>
 </div>
 
-Styleguide 2.3.6
+Styleguide 2.3.5
 */
-#profile-headline {
-  margin: -32px 8px 0;
-}
-@media only screen and (max-width: 1199px) {
-  #profile-headline {
-    margin: 0;
-  }
-}
 .headline {
   display: flex;
   flex-flow: column;
@@ -327,56 +306,34 @@ Styleguide 2.3.6
   justify-content: center;
   /* justify-content: center; */
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1279px) {
   .headline {
     align-items: center;
     justify-content: center;
   }
-  .headline > h3 {
-    margin-top: 16px;
+  .headline > h2 {
+    margin-bottom: 16px;
   }
 }
 
 /*
-Profile content
+List
 
-#profile-content - Profile content.
+Markup:
+<ul class="list list--single">
+  <li><h3>Front End Engineer</h3></li>
+  <li><h3>Web Application Architect</h3></li>
+  <li><h3>CTO at <a href="https://www.residuall.com/" target="_blank" aria-label="Residuall website" title="Residuall website.">Residuall</a></h3></li>
+</ul>
 
-Styleguide 2.3.7
+Styleguide 2.3.6
 */
-#profile-links {
-  margin-top: -20px;
+ul.list > li {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 8px;
 }
-
-@media only screen and (max-width: 599px) {
-  #profile-links {
-    margin-top: 0px;
-  }
-}
-@media only screen and (min-width: 600px) and (max-width: 1199px) {
-  #profile-links {
-    margin-top: 0px;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  #profile-links {
-    margin-top: 0px;
-  }
-}
-
-/*
-Feed
-
-Styleguide 2.3.8
-*/
-/*
-Feed boxes
-
-.feed-box  - Feed box.
-
-Styleguide 2.3.8.1
-*/
-.feed-box {
-  margin-top: 8px;
-  margin-bottom: 8px;
+ul.list > li > span {
+  margin-right: 8px;
 }

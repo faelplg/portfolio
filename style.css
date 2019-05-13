@@ -34,8 +34,8 @@ Responsivity checkpoints
 --tablet-portrait-min:   600px   - Tablet portrait min-width.
 --tablet-portrait-max:   899px   - Tablet portrait max-width.
 --tablet-landscape-min:  900px   - Tablet landscape min-width.
---tablet-landscape-max:  1199px  - Tablet landscape max-width.
---desktop-min:           1200px  - Regular desktop min-width.
+--tablet-landscape-max:  1279px  - Tablet landscape max-width.
+--desktop-min:           1280px  - Regular desktop min-width.
 --desktop-max:           1799px  - Regular desktop max-width.
 --big-desktop_min:       1800px  - Large desktop min-width.
 
@@ -46,8 +46,8 @@ Styleguide 1.2
   --tablet-portrait-min: 600px;
   --tablet-portrait-max: 899px;
   --tablet-landscape-min: 900px;
-  --tablet-landscape-max: 1199px;
-  --desktop-min: 1200px;
+  --tablet-landscape-max: 1279px;
+  --desktop-min: 1280px;
   --desktop-max: 1799px;
   --big-desktop_min: 1800px;
 }
@@ -119,15 +119,19 @@ Remove overflow from the body. Set the full height for main structures.
 Set initial structure behavior for containers like `DIV` and `SECTION`.
 
 .wrapper       - Main wrapper for full height.
-.height--full  - Force height 100%.
+.full-height   - Force height 100%.
+.full-width    - Force width 100%.
 
 Styleguide 1.4
 */
 html,
 body,
 .wrapper,
-.height--full {
+.full-height {
   height: 100%;
+}
+.full-width {
+  width: 100%;
 }
 html,
 body{
@@ -160,7 +164,7 @@ Styleguide 1.5
   padding: 16px;
 }
 /* --tablet-landscape-max */
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1279px) {
   .container {
     padding: 8px;
   }
@@ -179,10 +183,20 @@ Styleguide 1.5
   flex-flow: column;
 }
 .container--horizontal,
+.container--mobile-responsive,
 .container--responsive {
   flex-flow: row;
 }
+.container--horizontal.container--wrap {
+  flex-flow: row wrap;
+}
 @media only screen and (max-width: 599px) {
+  .container--mobile-responsive,
+  .container--responsive {
+    flex-flow: column;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
   .container--responsive {
     flex-flow: column;
   }
@@ -192,13 +206,13 @@ Styleguide 1.5
   margin-right: 33%;
 }
 /* --tablet-landscape-max */
-@media only screen and (min-width: 1199px) {
+@media only screen and (min-width: 1279px) {
   .container--center {
     margin-left: 23%;
     margin-right: 23%;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1199px) {
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
   .container--center {
     margin-left: 10%;
     margin-right: 10%;
@@ -260,6 +274,11 @@ Styleguide 1.7
 .justify-content--end {
   justify-content: flex-end;
 }
+@media only screen and (min-width: 1280px) {
+  .container--mobile-responsive.left {
+    justify-content: flex-end;
+  }
+}
 
 /*
 Post-imports
@@ -269,3 +288,4 @@ Post-imports
 Styleguide 1.8
 */
 @import './theme/theme.css';
+@import './states.css';

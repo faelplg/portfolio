@@ -7,9 +7,132 @@ Styleguide 3
 */
 
 /*
-Profile
+Cover
 
-The state of the profile visualization.
+Profile cover.
 
 Styleguide 3.1
 */
+/* #cover.cover > .cover__mask {
+  height: 250px;
+}
+@media only screen and (max-width: 599px) and (max-height: 480px) {
+  #cover.cover__mask {
+    height: 180px;
+  }
+} */
+
+/*
+Biography
+
+Styleguide 3.2
+*/
+#bio {
+  min-width: 600px;
+  width: 600px;
+}
+@media only screen and (max-width: 599px) {
+  #bio {
+    min-width: 0px;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1279px) {
+  #bio {
+    min-width: 0px;
+    width: auto;
+  }
+}
+/*
+Biography header
+
+Biography header with picture, headline and status.
+
+Styleguide 3.2.1
+*/
+#bio__header {
+  margin-top: -150px;
+}
+@media only screen and (max-width: 1279px) {
+  #bio__header {
+    margin-top: -106px;
+  }
+}
+/*
+Header picture
+
+Styleguide 3.2.1.1
+*/
+/*
+Header headline
+
+Styleguide 3.2.1.2
+*/
+#header__headline {
+  margin: -32px 8px 0;
+}
+@media only screen and (max-width: 1279px) {
+  #header__headline {
+    margin: 0;
+  }
+}
+
+/*
+Biography description
+
+Text with current position, biography text and coding skills.
+
+Styleguide 3.2.2
+*/
+/* #bio__description {
+
+} */
+/*
+Description titles
+
+Styleguide 3.2.2.1
+*/
+#description__titles {
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 1279px) {
+  #description__titles li h3 {
+    font-size: 14px;
+  }
+}
+/*
+Badge box
+
+Styleguide 3.2.2.2
+*/
+#badge__box {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/*
+Feed
+
+Styleguide 3.3
+*/
+/*
+Feed links
+
+Styleguide 3.3.1
+*/
+/*
+Feed works
+
+Styleguide 3.3.2
+*/
+#feed__works div h2 {
+  margin: 0 0 8px;
+}
+@media only screen and (max-width: 1279px) {
+  #feed__works div h1 {
+    font-size: 30px;
+  }
+  #feed__works div h2 {
+    font-size: 20px;
+  }
+}
