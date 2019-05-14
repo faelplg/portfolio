@@ -22,58 +22,38 @@ Styleguide 3.1
   }
 } */
 
+@import './theme/states/header.css';
+@import './theme/states/headline.css';
+
 /*
 Biography
 
-Styleguide 3.2
+Styleguide 3.4
 */
 #bio {
-  min-width: 600px;
-  width: 600px;
+  min-width: 420px;
+  width: 420px;
+  margin-top: -198px;
 }
 @media only screen and (max-width: 599px) {
   #bio {
     min-width: 0px;
     width: auto;
+    margin-top: 0px;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1279px) {
+@media only screen and (min-width: 600px) and (max-width: 899px) {
   #bio {
     min-width: 0px;
     width: auto;
+    margin-top: 0px;
   }
 }
-/*
-Biography header
-
-Biography header with picture, headline and status.
-
-Styleguide 3.2.1
-*/
-#bio__header {
-  margin-top: -150px;
-}
-@media only screen and (max-width: 1279px) {
-  #bio__header {
-    margin-top: -106px;
-  }
-}
-/*
-Header picture
-
-Styleguide 3.2.1.1
-*/
-/*
-Header headline
-
-Styleguide 3.2.1.2
-*/
-#header__headline {
-  margin: -32px 8px 0;
-}
-@media only screen and (max-width: 1279px) {
-  #header__headline {
-    margin: 0;
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  #bio {
+    min-width: 420px;
+    width: 420px;
+    margin-top: -105px;
   }
 }
 
@@ -82,18 +62,23 @@ Biography description
 
 Text with current position, biography text and coding skills.
 
-Styleguide 3.2.2
+Styleguide 3.3.1
 */
-/* #bio__description {
-
-} */
+#bio__description {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1279px) {
+  #bio__description {
+    margin-top: 0px;
+  }
+}
 /*
 Description titles
 
-Styleguide 3.2.2.1
+Styleguide 3.3.1.1
 */
 #description__titles {
-  margin-bottom: 8px;
+  margin: 16px 0;
 }
 @media only screen and (max-width: 1279px) {
   #description__titles li h3 {
@@ -103,7 +88,7 @@ Styleguide 3.2.2.1
 /*
 Badge box
 
-Styleguide 3.2.2.2
+Styleguide 3.3.1.2
 */
 #badge__box {
   margin-top: 8px;
@@ -113,17 +98,37 @@ Styleguide 3.2.2.2
 /*
 Feed
 
-Styleguide 3.3
+Styleguide 3.4
 */
+#feed {
+  margin-top: -200px;
+}
+@media only screen and (max-width: 599px) {
+  #feed {
+    margin-top: 0px;
+    order: -1;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #feed {
+    margin-top: 0px;
+    order: -1;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  #feed {
+    margin-top: -100px;
+  }
+}
 /*
 Feed links
 
-Styleguide 3.3.1
+Styleguide 3.4.1
 */
 /*
 Feed works
 
-Styleguide 3.3.2
+Styleguide 3.4.2
 */
 #feed__works div h2 {
   margin: 0 0 8px;

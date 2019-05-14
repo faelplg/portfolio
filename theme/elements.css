@@ -5,121 +5,9 @@ Color variables and main applications
 
 Styleguide 2.3
 */
-
-/*
-Horizontal rule
-
-Theme divider.
-
-Markup: <hr>
-
-Styleguide 2.3.1
-*/
-hr {
-  border-top-style: double;
-  border-top-width: 5px;
-}
-
-/*
-Badge
-
-* align-items: center;
-* border-radius: 18px;
-* display: flex;
-* flex-flow: row;
-* font-size: 20px;
-* height: 40px;
-* justify-content: center;
-* margin: 4px;
-* width: 100px;
-
-Markup: <span class="badge"></span>
-
-Styleguide 2.3.2
-*/
-.badge {
-  align-items: center;
-  border-radius: 18px;
-  display: flex;
-  flex-flow: row;
-  font-size: 13px;
-  height: 40px;
-  justify-content: center;
-  margin: 4px;
-  padding: 4px 16px;
-  width: auto;
-}
-.badge--raised {
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
-              0 2px 2px 0 rgba(0,0,0,.14),
-              0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-/*
-Profile cover
-
-.cover--src    - Great Observatories Unique Views of the Milky Way. Credit to JPL, NASA/JPL-Caltech/ESA/CXC/STScI NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA12348.html).
-.cover--src-01 - Jupiter Great Red Spot. Credit to JPL, NASA/JPL. [Image URL](https://images.nasa.gov/details-PIA01384.html).
-.cover--src-02 - A Cauldron of Stars at the Galaxy Center. Credit to JPL, NASA/JPL-Caltech. [Image URL](https://images.nasa.gov/details-PIA03654.html).
-.cover--src-03 - History of Hubble Space Telescope (HST). Credit to MSFC. [Image URL](https://images.nasa.gov/details-0302063.html).
-.cover--src-04 - Comets Kick up Dust in Helix Nebula. Credit to JPL, NASA/JPL-Caltech/Univ.of Ariz. [Image URL](https://images.nasa.gov/details-PIA09178.html).
-
-Markup:
-<div class="box--shrink container container--raw cover {{modifier_class}}">
-  <div class="box cover__mask"></div>
-</div>
-
-Styleguide 2.3.3
-*/
-.cover {
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-}
-.cover.cover--src {
-  background-image: url('./assets/cover_img.jpg');
-}
-.cover.cover--src-01 {
-  background-image: url('./assets/cover_img_01.jpg');
-}
-.cover.cover--src-02 {
-  background-image: url('./assets/cover_img_02.jpg');
-}
-.cover.cover--src-03 {
-  background-image: url('./assets/cover_img_03.jpg');
-}
-.cover.cover--src-04 {
-  background-image: url('./assets/cover_img_04.jpg');
-}
-.cover.cover--src-05 {
-  background-image: url('./assets/cover_img_05.jpg');
-}
-.cover > .cover__mask {
-  color: #FAFAFA;
-  height: 300px;
-  /** Gradient - bottom */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.95+100 */
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
-}
-@media only screen and (max-width: 599px) {
-  .cover > .cover__mask {
-    height: 180px;
-  }
-}
-@media only screen and (max-width: 599px) {
-  .cover {
-    background-size: cover;
-  }
-}
-@media only screen and (min-width: 600px) and (max-width: 1279px) {
-  .cover {
-    background-size: cover;
-  }
-}
+@import './elements/dividers.css';
+@import './elements/badge.css';
+@import './elements/cover.css';
 
 /*
 Diamonds
@@ -143,8 +31,8 @@ Styleguide 2.3.4
   flex-flow: row;
   justify-content: center;
   background: transparent;
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
   /* border: 1px solid red; */
   z-index: 5;
 }
@@ -155,8 +43,8 @@ Styleguide 2.3.4
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   margin: 0;
   transform: rotate(-45deg);
   z-index: 6;
@@ -298,21 +186,22 @@ Markup:
 
 Styleguide 2.3.5
 */
-.headline {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  /* align-items: flex-start; */
-  justify-content: center;
-  /* justify-content: center; */
-}
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 599px) {
   .headline {
     align-items: center;
     justify-content: center;
   }
-  .headline > h2 {
-    margin-bottom: 16px;
+}
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  .headline {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  .headline {
+    align-items: start;
+    justify-content: start;
   }
 }
 
@@ -332,7 +221,7 @@ ul.list > li {
   display: flex;
   flex-flow: row;
   align-items: center;
-  margin: 8px;
+  margin: 8px 0;
 }
 ul.list > li > span {
   margin-right: 8px;
