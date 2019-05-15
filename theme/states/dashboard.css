@@ -1,0 +1,36 @@
+/*
+Dashboard
+
+Styleguide 3.2
+*/
+#dashboard {
+  min-width: 420px;
+  width: 420px;
+  margin-top: -198px;
+  padding-top: 50px;
+}
+@media only screen and (max-width: 599px) {
+  #dashboard {
+    min-width: 0px;
+    width: auto;
+    margin-top: 0px;
+    padding-top: 0;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #dashboard {
+    min-width: 0px;
+    width: auto;
+    margin-top: 0px;
+    padding-top: 0;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  #dashboard {
+    min-width: 420px;
+    width: 420px;
+    margin-top: -105px;
+    padding-top: 30px;
+    padding-top: 0;
+  }
+}

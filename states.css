@@ -6,72 +6,9 @@ State-specific styles that customize the shape and behavior of the style structu
 Styleguide 3
 */
 
-/*
-Cover
-
-Profile cover.
-
-Styleguide 3.1
-*/
-/* #cover.cover > .cover__mask {
-  height: 250px;
-}
-@media only screen and (max-width: 599px) and (max-height: 480px) {
-  #cover.cover__mask {
-    height: 180px;
-  }
-} */
-
 @import './theme/states/header.css';
-@import './theme/states/headline.css';
+@import './theme/states/dashboard.css';
 
-/*
-Biography
-
-Styleguide 3.4
-*/
-#bio {
-  min-width: 420px;
-  width: 420px;
-  margin-top: -198px;
-}
-@media only screen and (max-width: 599px) {
-  #bio {
-    min-width: 0px;
-    width: auto;
-    margin-top: 0px;
-  }
-}
-@media only screen and (min-width: 600px) and (max-width: 899px) {
-  #bio {
-    min-width: 0px;
-    width: auto;
-    margin-top: 0px;
-  }
-}
-@media only screen and (min-width: 900px) and (max-width: 1279px) {
-  #bio {
-    min-width: 420px;
-    width: 420px;
-    margin-top: -105px;
-  }
-}
-
-/*
-Biography description
-
-Text with current position, biography text and coding skills.
-
-Styleguide 3.3.1
-*/
-#bio__description {
-  margin-top: 50px;
-}
-@media only screen and (max-width: 1279px) {
-  #bio__description {
-    margin-top: 0px;
-  }
-}
 /*
 Description titles
 
