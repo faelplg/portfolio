@@ -17,10 +17,13 @@ import coverImg01 from './theme/assets/cover_img_01.jpg';
 import coverImg02 from './theme/assets/cover_img_02.jpg';
 import coverImg03 from './theme/assets/cover_img_03.jpg';
 
-const diamondButtons = document.querySelectorAll('button.new-diamond');
+const diamondButtons = document.querySelectorAll('button.diamond');
 diamondButtons.forEach(button => {
   button.addEventListener("click", function(){
-    switch (this.childNodes[1].childNodes[3].id) {
+    console.log('Below this.childNodes');
+    console.log(this.childNodes);
+    console.log('Below each button');
+    switch (button.childNodes[3].id) {
       case 'github-icon':
         window.open(`https://github.com/faelplg`,'_blank');
         break;

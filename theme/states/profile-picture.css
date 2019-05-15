@@ -1,0 +1,30 @@
+/*
+Profile picture
+
+Profile picture header.
+
+Styleguide 3.2
+*/
+#profile-picture {
+  /* position: absolute; */
+  margin-top: 55px;
+  margin-left: 144px;
+}
+@media only screen and (max-width: 599px) {
+  #profile-picture {
+    margin-top: 45px;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #profile-picture {
+    margin-top: 45px;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  #profile-picture {
+    margin-top: 45px;
+    margin-left: 154px;
+  }
+}

@@ -285,11 +285,6 @@ Styleguide 1.7
 .justify-content--end {
   justify-content: flex-end;
 }
-@media only screen and (min-width: 1280px) {
-  .container--mobile-responsive.left {
-    justify-content: flex-end;
-  }
-}
 
 /*
 Post-imports

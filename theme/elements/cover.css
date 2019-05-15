@@ -39,8 +39,9 @@ Styleguide 2.3.3
   background-image: url('../assets/cover_img_05.jpg');
 }
 .cover > .cover__mask {
+  height: 120px;
+  /** FIXME: Move to colors. */
   color: #FAFAFA;
-  height: 200px;
   /** Gradient - bottom */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.95+100 */
   background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%); /* FF3.6-15 */
@@ -50,15 +51,28 @@ Styleguide 2.3.3
 }
 @media only screen and (max-width: 599px) {
   .cover > .cover__mask {
-    height: 180px;
+    height: 100px;
+    display: flex;
+    flex-flow: row;
+    align-item: center;
+    justify-content: center;
   }
 }
-@media only screen and (max-width: 599px) {
-  .cover {
-    background-size: cover;
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  .cover > .cover__mask {
+    height: 100px;
+    display: flex;
+    flex-flow: row;
+    align-item: center;
+    justify-content: center;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1279px) {
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  .cover > .cover__mask {
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 1279px) {
   .cover {
     background-size: cover;
   }

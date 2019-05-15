@@ -6,8 +6,10 @@ State-specific styles that customize the shape and behavior of the style structu
 Styleguide 3
 */
 
-@import './theme/states/header.css';
+@import './theme/states/profile-cover.css';
+@import './theme/states/profile-picture.css';
 @import './theme/states/dashboard.css';
+@import './theme/states/header.css';
 
 /*
 Description titles
@@ -38,23 +40,23 @@ Feed
 Styleguide 3.4
 */
 #feed {
-  margin-top: -200px;
+  /* margin-top: -200px; */
 }
 @media only screen and (max-width: 599px) {
   #feed {
-    margin-top: 0px;
+    /* margin-top: 0px; */
     order: -1;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 899px) {
   #feed {
-    margin-top: 0px;
+    /* margin-top: 0px; */
     order: -1;
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1279px) {
   #feed {
-    margin-top: -100px;
+    /* margin-top: -100px; */
   }
 }
 /*

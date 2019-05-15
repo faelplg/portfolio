@@ -155,16 +155,16 @@ The diamonds are the main elements of the portfolio.
 They represent the main links for social networks and online tools for developers.
 Besides this, the diamond is the shape of the profile picture.
 
-.new-diamond--large  - Large diamond color.
+.diamond--large  - Large diamond color.
 
 Markup:
-<div class="new-diamond {{modifier_class}}">
-  <div class="new-diamond__shape"></div>
+<div class="diamond {{modifier_class}}">
+  <div class="diamond"></div>
 </div>
 
 Styleguide 2.1.4
 */
-.new-diamond__shape {
+.diamond {
   /* background-color: var(--light-gray, #eeeeee); */
   background-color: var(--gray, #eeeeee);
   color: var(--black, #222);
@@ -173,72 +173,71 @@ Styleguide 2.1.4
               0 2px 16px 1px rgba(0,0,0,.12);
   transition: all 0.2s ease-in-out;
 }
-.new-diamond.new-diamond--large > .new-diamond__shape {
+.diamond.diamond--large {
   background-color: white;
 }
 
 /*
 Diamond button
 
-.new-diamond--primary  - Primary theme.
-.new-diamond--dark     - Dark theme.
+.diamond--primary  - Primary theme.
+.diamond--dark     - Dark theme.
 
 Markup:
-<button class="new-diamond {{modifier_class}}">
-  <div class="new-diamond__shape"></div>
+<button class="diamond {{modifier_class}}">
+  <div class="diamond"></div>
 </button>
 
 Styleguide 2.1.4.1
 */
-button.new-diamond {
+button.diamond {
   outline: none;
   -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 }
 
 /** Primary theme */
-button.new-diamond.new-diamond--primary > .new-diamond__shape {
+button.diamond.diamond--primary {
   background-color: var(--purple, #ffc107);
   color: var(--black, #222);
   fill: var(--black, #222);
 }
 /** Dark theme*/
-button.new-diamond.new-diamond--dark > .new-diamond__shape {
+button.diamond.diamond--dark {
   background-color: var(--black, #222);
   color: white;
   fill: white;
 }
 
 /** Button behavior */
-button.new-diamond:not(:disabled):hover > .new-diamond__shape {
+button.diamond:not(:disabled):hover {
   box-shadow: 0 7px 9px -4px rgba(0,0,0,.2),
               0 14px 21px 2px rgba(0,0,0,.14),
               0 5px 26px 4px rgba(0,0,0,.12);
-  background-color: var(--gray);
-  color: var(--purple, #ffc107);
-  fill: var(--purple, #ffc107);
-  border-color: var(--purple, #ffc107);
-}
-button.new-diamond:not(:disabled):focus > .new-diamond__shape {
-  background-color: var(--gray, #666);
-  color: var(--purple, #ffc107);
-  outline: none;
-  fill: var(--purple, #ffc107);
-  border-color: var(--purple, #ffc107);
-}
-button.new-diamond:not(:disabled):active > .new-diamond__shape,
-button.new-diamond:not(:disabled).active > .new-diamond__shape {
-  box-shadow: none;
-  background-color: transparent;
-  color: var(--purple, #ffc107);
-  fill: var(--purple, #ffc107);
+  background-color: var(--light-black);
+  color: white;
+  fill: white;
   border-color: transparent;
 }
-button.new-diamond:not(:disabled):visited > .new-diamond__shape {
+button.diamond:not(:disabled):focus {
+  background-color: var(--light-black, #666);
+  color: white;
+  outline: none;
+  fill: white;
+  border-color: transparent;
+}
+button.diamond:not(:disabled):active,
+button.diamond:not(:disabled).active {
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--black, #ffc107);
+  fill: var(--black, #ffc107);
+  border-color: transparent;
+}
+button.diamond:not(:disabled):visited {
   outline: none;
 }
-button.new-diamond:disabled > .new-diamond__shape {
-  background-color: var(--purple, #ffc107);
-  /* background-color: var(--light-gray, #d1d1d1); */
+button.diamond:disabled {
+  background-color: black;
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),
               0 1px 1px 0 rgba(0,0,0,.14),
               0 1px 3px 0 rgba(0,0,0,.12);

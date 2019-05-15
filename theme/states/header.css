@@ -1,37 +1,25 @@
 /*
 Header
 
-Biography header with picture, headline and status.
+Dashboard with the links and user header informations.
 
-Styleguide 3.2
+Styleguide 3.4
 */
-#header {
-  margin-top: -150px;
-  margin-left: 60px;
-  margin-bottom: 50px;
+/* #header {
+  margin-top: -166px;
 }
 @media only screen and (max-width: 599px) {
   #header {
-    margin-top: -106px;
-    margin-left: 0;
-    margin-bottom: 0;
-    align-items: center;
-    justify-content: center;
+    margin-top: 0px;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 899px) {
   #header {
-    margin-top: -106px;
-    margin-left: 0;
-    margin-bottom: 0;
-    align-items: center;
-    justify-content: center;
+    margin-top: 0px;
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1279px) {
   #header {
-    margin-top: -106px;
-    margin-left: 104px;
-    margin-bottom: 0;
+    margin-top: -105px;
   }
-}
+} */
