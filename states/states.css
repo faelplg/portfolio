@@ -7,22 +7,9 @@ Styleguide 3
 */
 
 @import './profile-cover.css';
-@import './dashboard.css';
-@import './header.css';
+@import './profile-titles.css';
+@import './profile-links.css';
 
-/*
-Description titles
-
-Styleguide 3.3.1.1
-*/
-#description__titles {
-  margin: 16px 0;
-}
-@media only screen and (max-width: 1279px) {
-  #description__titles li h3 {
-    font-size: 14px;
-  }
-}
 /*
 Badge box
 

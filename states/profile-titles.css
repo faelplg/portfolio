@@ -1,0 +1,25 @@
+/*
+Profile links
+
+Styleguide 3.3
+*/
+#profile-titles {
+  margin: 16px;
+}
+@media only screen and (max-width: 1279px) {
+  #profile-titles ul li h3 {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 599px) {
+  #profile-titles {
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #profile-titles {
+    align-items: center;
+  }
+}
+/* @media only screen and (min-width: 900px) and (max-width: 1279px) {
+} */

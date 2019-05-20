@@ -17,7 +17,7 @@ Styleguide 2.3.3
 .cover {
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /* background-position: center center; */
 }
 .cover.cover--src {

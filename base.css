@@ -179,6 +179,12 @@ Styleguide 1.5
     padding: 16px;
   }
 }
+/* --tablet-landscape-min to --tablet-landscape-max */
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  .container {
+    padding: 16px;
+  }
+}
 .container--dense {
   padding: 8px;
 }

@@ -1,0 +1,26 @@
+/*
+Profile links
+
+Styleguide 3.3
+*/
+#profile-links {
+  margin: 48px 16px;
+}
+#profile-links .diamond {
+  margin: 20px;
+}
+@media only screen and (max-width: 599px) {
+  #profile-links {
+    margin: 16px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #profile-links {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  #profile-links {
+    margin: 0;
+  }
+}
