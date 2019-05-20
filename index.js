@@ -10,7 +10,7 @@
 // __wrapper.appendChild(component());
 // console.log('From index.js', __wrapper);
 import readme from './README.md';
-import './style.css';
+import './base.css';
 import profileImg from './theme/assets/profile_pic_thumb.jpg';
 import coverImg from './theme/assets/cover_img.jpg';
 import coverImg01 from './theme/assets/cover_img_01.jpg';

@@ -40,6 +40,10 @@ Styleguide 2.3.3
 }
 .cover > .cover__mask {
   height: 120px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   /** FIXME: Move to colors. */
   color: #FAFAFA;
   /** Gradient - bottom */
@@ -53,23 +57,17 @@ Styleguide 2.3.3
   .cover > .cover__mask {
     height: 100px;
     display: flex;
-    flex-flow: row;
-    align-item: center;
-    justify-content: center;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 899px) {
   .cover > .cover__mask {
     height: 100px;
     display: flex;
-    flex-flow: row;
-    align-item: center;
-    justify-content: center;
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1279px) {
   .cover > .cover__mask {
-    height: 100px;
+    height: 110px;
   }
 }
 @media only screen and (max-width: 1279px) {

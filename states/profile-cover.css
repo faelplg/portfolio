@@ -1,0 +1,50 @@
+/*
+Profile cover
+
+Profile cover header.
+
+Styleguide 3.1
+*/
+#profile-cover {
+  /* border: 3px dashed red; */
+  margin: 16px;
+  padding-bottom: 16px;
+  background-color: lightgray;
+  border-radius: 18px;
+}
+#profile-cover .diamond {
+  margin-top: -65px;
+}
+@media only screen and (max-width: 599px) {
+  #profile-cover {
+    margin: 0;
+  }
+  #profile-cover .diamond {
+    margin-top: -55px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  #profile-cover {
+    margin: 0;
+  }
+  #profile-cover .diamond {
+    margin-top: -55px;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
+  #profile-cover {
+    margin: 16px;
+  }
+  #profile-cover .diamond {
+    margin-top: -55px;
+  }
+}
+
+#profile-cover .headline {
+  margin-top: 24px;
+}
+#profile-cover .cover,
+#profile-cover .cover .cover__mask {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}

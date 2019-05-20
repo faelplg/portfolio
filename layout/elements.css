@@ -148,7 +148,7 @@ Styleguide 2.3.5
     justify-content: center;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 899px) {
+/* @media only screen and (min-width: 600px) and (max-width: 899px) {
   .headline {
     align-items: center;
     justify-content: center;
@@ -159,7 +159,7 @@ Styleguide 2.3.5
     align-items: start;
     justify-content: start;
   }
-}
+} */
 
 /*
 List

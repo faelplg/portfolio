@@ -5,31 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="author" content="@faelplg">
-    <title>faelplg: code && web && science</title>
+    <title>@faelplg: Code, Web and Science</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper container container--raw">
-      <!-- Profile cover state -->
-      <div id="profile-cover" class="box--shrink container container--raw cover cover--src-05 full-width">
-        <div class="box cover__mask">
-          <!-- Diamond element -->
-          <div id="profile-picture" class="diamond diamond--large">
-            <!-- Profile picture -->
-            <img class="picture" src="./theme/assets/profile_pic_thumb.jpg" alt="Fake placeholder.">
-          </div>
+      <!-- Profile cover state, Container element -->
+      <div id="profile-cover" class="box--shrink container container--raw align-items--center">
+        <div class="box--shrink cover cover--src-05 full-width">
+          <div class="box cover__mask"></div>
+        </div>
+        <!-- Profile picture state, Diamond element -->
+        <div class="diamond diamond--large">
+          <!-- Picture element -->
+          <img class="picture" src="./theme/assets/profile_pic_thumb.jpg" alt="Fake placeholder.">
+        </div>
+        <!-- Headline element -->
+        <div class="box--shrink container container--raw headline">
+          <h1>Rafael Goulart</h1>
+          <h2>@faelplg</h2>
         </div>
       </div>
 
-      <!-- Profile picture state -->
-      <!-- <div id="profile-picture" class="box--shrink container container--raw">
-      </div> -->
-      <!-- #profile-picture -->
-
       <!-- Header state -->
-      <div id="header" class="box container container--raw container--responsive">
+      <div id="header" class="box container container--raw container--mobile-responsive align-items--center justify-content--center">
         <!-- Dashboard state with light gray background. -->
-        <div id="dashboard" class="box--shrink container container--dense b--light-gray align-items--center">
+        <div id="dashboard" class="box--shrink container container--dense align-items--center">
           <div class="box--shrink container container--horizontal container--raw">
             <button type="button" role="link" class="diamond diamond--dark">
               <!-- StackBlitz icon -->
@@ -92,77 +93,80 @@
               </svg><!-- #medium-icon -->
             </button>
           </div>
-          <div class="box--shrink container container--dense">
-            <h3 style="margin:16px 8px 0;">Skills:</h3>
-            <div id="badge__box" class="box box--shrink container container--horizontal container--raw container--wrap">
-              <span class="badge badge--raised">JavaScript (ES6+)</span>
-              <span class="badge badge--raised">Node</span>
-              <span class="badge badge--raised">HTML</span>
-              <span class="badge badge--raised">CSS 2.1/3</span>
-              <span class="badge badge--raised">Pre-processors</span>
-              <span class="badge badge--raised">Frameworks</span>
-              <span class="badge badge--raised">DB modeling</span>
-              <span class="badge badge--raised">REST APIs</span>
-              <span class="badge badge--raised">Infra/DevOps</span>
-              <span class="badge badge--raised">Deployment</span>
-              <span class="badge badge--raised">Bundlers</span>
-              <span class="badge badge--raised">Dataviz</span>
-            </div><!-- #badge__box -->
-          </div>
         </div><!-- #dashboard -->
-        <!-- Feed state -->
-        <div id="feed" class="box container container--raw">
-          <!-- Headline element -->
-          <div class="box container headline">
-            <h1>Rafael Goulart</h1>
-            <h2>@faelplg</h2>
-          </div>
+        <div id="presentation" class="box container container--raw justify-content--center">
           <div class="box--shrink container container--shaved">
             <ul id="description__titles" class="list list--single">
-              <li><span class="material-icons">code</span><h3>Front End Engineer</h3></li>
-              <li><span class="material-icons">explore</span><h3>Web Application Architect</h3></li>
-              <li><span class="material-icons">work</span><h3>CTO at <a href="https://www.residuall.com/" target="_blank" aria-label="Residuall website" title="Residuall website.">Residuall</a></h3></li>
+              <li><span class="material-icons">bug_report</span><h3>Front End Engineer</h3></li>
+              <li><span class="material-icons">bug_report</span><h3>Web Application Architect</h3></li>
+              <li><span class="material-icons">bug_report</span><h3>CTO at <a href="https://www.residuall.com/" target="_blank" aria-label="Residuall website" title="Residuall website.">Residuall</a></h3></li>
             </ul>
           </div>
-          <div class="box container">
-            <h2>Bio</h2>
-            <p>
-              Experienced product developer in the software industry with strengths in application engineering, process optimization, and technology researches. Successful in developing a technology that has resulted in an over 40% increase in operational efficiency of waste collection companies.
-            </p>
-            <p>
-              Loves to work with micro-interactions and layout architectures, especially the component-based ones. With the current goal of building a web development architecture/methodology, creates experiments to develop proofs of concepts.
-            </p>
-            <p>
-              With a business process engineering background, studies the critical success factors of the company and works to improve its productivity, efficiency, and operational costs. The goal is to make everyone understand its activities and focus on what matters for business health.
-            </p>
-            <p>--</p>
-            <p>Recycling activist. Be green or be vanished.</p>
-          </div>
-          <div id="feed__works" class="box container">
-            <div class="box container container--raw">
-              <h1>Featured on Codepen</h1>
-              <h2>CSS Grid Skeleton Screen:</h2>
-              <p class="codepen"
-                 data-height="300"
-                 data-theme-id="dark"
-                 data-default-tab="css,result"
-                 data-user="faelplg"
-                 data-slug-hash="bxoxZY"
-                 data-preview="true"
-                <span>See the Pen <a href="https://codepen.io/faelplg/pen/bxoxZY/">
-                  CSS Grid Card Skeleton Screen (w/ Custom Properties)</a> by Rafael Goulart (<a href="https://codepen.io/faelplg">@faelplg</a>)
-                  on <a href="https://codepen.io">CodePen</a>.
-                </span>
-              </p>
-            </div>
-            <div class="box container container--raw">
-              <h1>Featured on Stackblitz</h1>
-              <h2>Layout builder using only JS:</h2>
-              <iframe src="https://stackblitz.com/edit/layout-builder?ctl=1&embed=1&file=index.js" width="100%" height="300"></iframe>
-            </div>
-          </div>
-        </div><!-- #feed -->
+        </div>
       </div><!-- #header -->
+      <!-- Bio state, Container element -->
+      <div id="bio"
+           class="box container align-items--center justify-content--center">
+        <div class="box container container--dense"
+             style="max-width: 768px;">
+          <h2>Bio</h2>
+          <p>
+            Experienced product developer in the software industry with strengths in application engineering, process optimization, and technology researches. Successful in developing a technology that has resulted in an over 40% increase in operational efficiency of waste collection companies.
+          </p>
+          <p>
+            Loves to work with micro-interactions and layout architectures, especially the component-based ones. With the current goal of building a web development architecture/methodology, creates experiments to develop proofs of concepts.
+          </p>
+          <p>
+            With a business process engineering background, studies the critical success factors of the company and works to improve its productivity, efficiency, and operational costs. The goal is to make everyone understand its activities and focus on what matters for business health.
+          </p>
+        </div>
+        <div class="box--shrink container container--raw"
+             style="max-width: 768px;">
+          <h3 style="margin:16px 8px 0;">Skills:</h3>
+          <!-- Bagde box state, Box container element -->
+          <div id="badge__box" class="box box--shrink container container--horizontal container--raw container--wrap">
+            <span class="badge badge--raised">JavaScript (ES6+)</span>
+            <span class="badge badge--raised">Node</span>
+            <span class="badge badge--raised">HTML</span>
+            <span class="badge badge--raised">CSS 2.1/3</span>
+            <span class="badge badge--raised">Pre-processors</span>
+            <span class="badge badge--raised">Frameworks</span>
+            <span class="badge badge--raised">DB modeling</span>
+            <span class="badge badge--raised">REST APIs</span>
+            <span class="badge badge--raised">Infra/DevOps</span>
+            <span class="badge badge--raised">Deployment</span>
+            <span class="badge badge--raised">Bundlers</span>
+            <span class="badge badge--raised">Dataviz</span>
+          </div>
+          <!-- #badge__box -->
+        </div>
+      </div><!-- #bio -->
+      <!-- Feed state -->
+      <div id="feed" class="box container container--raw">
+        <div id="feed__works" class="box container">
+          <div class="box container container--raw">
+            <h1>Featured on Codepen</h1>
+            <h2>CSS Grid Skeleton Screen:</h2>
+            <p class="codepen"
+               data-height="300"
+               data-theme-id="dark"
+               data-default-tab="css,result"
+               data-user="faelplg"
+               data-slug-hash="bxoxZY"
+               data-preview="true"
+              <span>See the Pen <a href="https://codepen.io/faelplg/pen/bxoxZY/">
+                CSS Grid Card Skeleton Screen (w/ Custom Properties)</a> by Rafael Goulart (<a href="https://codepen.io/faelplg">@faelplg</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+              </span>
+            </p>
+          </div>
+          <div class="box container container--raw">
+            <h1>Featured on Stackblitz</h1>
+            <h2>Layout builder using only JS:</h2>
+            <iframe src="https://stackblitz.com/edit/layout-builder?ctl=1&embed=1&file=index.js" width="100%" height="300"></iframe>
+          </div>
+        </div>
+      </div><!-- #feed -->
     </div>
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   </body>

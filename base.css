@@ -19,9 +19,9 @@ Styleguide 1
 Code indentation
 
 * Use two (2) spaces for indentation.
-* Use dashes (`prefix-suffix`) to separate words.
-* Use [BEM](http://getbem.com/) convention, e.g. block__element--modifier.
+* Use single dashes (`name1-name2`) to write compound words.
 * Use classes for reusability and to reduce conflicts.
+* Use [BEM](http://getbem.com/) convention to write classes, e.g. block__element--modifier.
 * Use ids for state-specific cases.
 
 Styleguide 1.1
@@ -152,6 +152,7 @@ Flexible container
 
 .container              - Default flex container class.
 .container--full        - Keep properties from default container on the mobile resolution.
+.container--shaved      - Container with large side-paddings and small topb/bottom paddings.
 .container--dense       - A container with lowest padding.
 .container--raw         - A container with no padding.
 .container--horizontal  - Horizontal direction; `flex-flow: row;`.
@@ -241,7 +242,6 @@ Flexible boxes
 
 .box          - Default flexible box with `flex: auto;` property.
 .box--shrink  - Flexible box with `flex: initial` (no shrink) property.
-.box--squeeze - Flexible box with `flex: 0` (no shrink) property.
 
 Styleguide 1.6
 */
@@ -293,5 +293,5 @@ Post-imports
 
 Styleguide 1.8
 */
-@import './theme/theme.css';
-@import './states.css';
+@import './layout/theme.css';
+@import './states/states.css';
