@@ -11,11 +11,11 @@
 // console.log('From index.js', __wrapper);
 import readme from './README.md';
 import './base.css';
-import profileImg from './theme/assets/profile_pic_thumb.jpg';
-import coverImg from './theme/assets/cover_img.jpg';
-import coverImg01 from './theme/assets/cover_img_01.jpg';
-import coverImg02 from './theme/assets/cover_img_02.jpg';
-import coverImg03 from './theme/assets/cover_img_03.jpg';
+import profileImg from './layout/assets/profile_pic_thumb.jpg';
+import coverImg from './layout/assets/cover_img.jpg';
+import coverImg01 from './layout/assets/cover_img_01.jpg';
+import coverImg02 from './layout/assets/cover_img_02.jpg';
+import coverImg03 from './layout/assets/cover_img_03.jpg';
 
 const diamondButtons = document.querySelectorAll('button.diamond');
 diamondButtons.forEach(button => {
